@@ -1,0 +1,125 @@
+
+
+
+.container-carousel {
+    margin: 2% 20%;
+ 
+     overflow: hidden;
+ }
+ @media (max-width: 800px) {
+     .container-carousel {
+         margin:2% 0%;
+     }
+ }
+ .carousel {
+     position: relative;
+   border:5px solid #fde7e1;
+   background-color:white;
+ }
+ .carousel-inner {
+     display: flex;
+     overflow: hidden;
+     height: 80vh;
+     flex-wrap: nowrap;
+ }
+ .slide {
+     flex: 0 0 100%;
+     /* Largeur de chaque diapositive est de 100% */
+     height: 100%;
+     /* Hauteur de chaque diapositive est de 100% */
+     transition: .5s ease-in-out;
+     /* Ajout d'une animation douce pour la transition entre les diapositives */
+ }
+ 
+ .slide div {
+   background-color:rgba(255, 255, 255, 0.5);
+   
+   position: absolute;
+     left: 0;
+     right: 0;
+     bottom:0;
+   text-align:center;
+   padding:10px;
+ }
+ 
+ .slide h2 {
+   text-align:center;
+   margin-top:10px;
+   margin-bottom:10px;
+ }
+ 
+ .slide img {
+   margin:auto;
+     width: 80%;
+     height: 80%;
+     object-fit: contain;
+   display:block;
+   
+ }
+ .carousel-controls {
+   
+   opacity:0.8;
+     position: absolute;
+     z-index: 5;
+     left: 1%;
+     right:1%;
+     top:45%;
+     display: flex;
+     justify-content: space-between;
+ }
+ .carousel-controls button {
+     padding:50px;
+     background: none;
+     border-radius: 10px;
+     background-size: cover;
+     border: none;
+     cursor: pointer;
+     transition: all 0.1s ease-out;
+ }
+ 
+ .carousel-controls button:hover {
+     transform: scale(1.1);
+ }
+ 
+ .carousel-controls button:nth-child(1) {
+     background-image: url("https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/leftarrow.png?v=1706634060280");
+ }
+ .carousel-controls button:nth-child(2) {
+     background-image: url("https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/rightarrow.png?v=1706634060887");
+ }
+ 
+ 
+ 
+ 
+ .carousel-dots {
+     position: absolute;
+     z-index: 5;
+     left: 50%;
+     right: 50%;
+     bottom: 5%;
+     display: flex;
+     justify-content: center;
+ }
+ .carousel-dots .dot {
+     border-radius: 50%;
+     margin: 5px;
+     cursor: pointer;
+ }
+ .carousel-dots .active {
+     border: 10px solid #fde7e1 !important;
+ }
+ .carousel-dots .inactive {
+     border: 10px solid #ffbeb6;
+ }
+ 
+ .container-carousel ul, .container-carousel ul li {
+   display:inline;
+ }
+ 
+ .container-carousel ul li svg {
+   width:7px;
+   margin-right:4px;
+ }
+ .container-carousel ul li.langage-python svg {
+   color:orange;
+ }

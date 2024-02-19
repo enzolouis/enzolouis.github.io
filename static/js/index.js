@@ -3,11 +3,11 @@
 let invisible_nav = document.getElementById("invisible")
 
 function incrementHeight(height) {
-	invisible_nav.style.height = height + "px";
+	invisible_nav.style.height = height + "vh";
 }
 
 function decrementHeight(height) {
-	invisible_nav.style.height = height + "px";
+	invisible_nav.style.height = height + "vh";
 }
 
 
@@ -38,32 +38,45 @@ function showHamburgerNavBar() {
 //
 
 
-var scroll = window.requestAnimationFrame ||
+let scroll = window.requestAnimationFrame ||
     function(callback) {window.setTimeout(callback, 1000/60)};
 
 var elementsToShow = document.querySelectorAll(".image-scroll");
+var timelineToShow = document.querySelectorAll(".content");
 
 function loop() {
   elementsToShow.forEach(function (element) {
     if (isElementInViewport(element)) {
+      element.classList.remove("image-scroll-invisible");
       element.classList.add("image-scroll-visible");
     } else {
-      element.classList.add("image-scroll-hidden");
+      element.classList.remove("image-scroll-visible");
+      element.classList.add("image-scroll-invisible");
     }
   });
+  timelineToShow.forEach(function (element) {
+	    if (isElementInViewport(element)) {
+	    	element.classList.remove("timeline-invisible");
+	    	element.classList.add("timeline-visible");
+	    } else {
+	      element.classList.remove("timeline-visible");
+	      element.classList.add("timeline-invisible");
+	    }
+	  });
   scroll(loop);
 }
 
 loop();
 
+
 function isElementInViewport(el) {
-  var rect = el.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document. documentElement.clientHeight) + 300 &&
-    rect.right <= (window.innerWidth || document. documentElement.clientWidth) + 300
-  );
+  let rect = el.getBoundingClientRect();
+    let elementHeight = rect.bottom - rect.top;
+    let offset = elementHeight - 100;
+    return (
+        rect.bottom-offset <= (window.innerHeight) &&
+        rect.top+offset >=0
+    );
 }
 
 //
@@ -80,9 +93,7 @@ let isFinished = false;
 function removeAbsBackground() {
 		let a = 2
 		for (let i = window.innerHeight; i >= 0 ; i--) {
-			a += 0.4;
+			a += 0.8;
 			setTimeout(showMore, a, i)
 		}
 }
-
-

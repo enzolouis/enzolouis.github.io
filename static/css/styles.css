@@ -14,6 +14,9 @@ https://www.youtube.com/watch?v=9-GXlvohlvA&list=WL&index=18
 :root {
 	--main-color: #353b48;
 	--main-background-color:  #f0f0f0; /* #dcdde1; */
+  --camel:#fde7e1;
+  --red:#ecab9e;
+  --black:#52505e;
 }
 
 
@@ -24,6 +27,9 @@ button {border: none;}
 main {padding: 0; /* color: #0C4B33; #44B78B */}
 html {height: 100%}
 
+a:visited {
+  color:#1f78d2;
+}
 
 body {
 	margin: 0;

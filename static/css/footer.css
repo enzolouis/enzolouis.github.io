@@ -7,90 +7,37 @@ footer {
 	margin-bottom: 0; /* POUR NE PAS ETRE INFLUENCE PAR LE FLOAT */
 
 	background-color: #fde7e1;
-	padding: 1vh 8vh 1vh 2vh;
+	padding: 10px 0 5px 0;
 	display: block;
+  border-top:1px solid #ecab9e;
 
 	margin-top: auto; /* MISE EN PLACE DU DISPLAY FLEX POUR COLLER LE FOOTER EN BAS DE PAGE QUAND LA PAGE EST COURTE */
 }
 
-footer:before, footer:after {
-	content:"";
-	display:block;
-	height:5px;
-	background-color:#ecab9e;
-	margin:0 auto;
-	width:10%;
-}
-
-footer div.container {
-	display: flex;
-	align-items: center;
-	justify-content: space-around; /* space-around */
-}
 
 footer div.container ul.flex-ul {
-	flex: 1;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-around;
 	flex-flow: row wrap;
+  margin:0;
 }
 
-footer div.container ul.flex-ul ul {
-	flex: 0;
-	line-height: 30px;
-}
-
-footer div.container ul.flex-ul ul li {
+footer div.container ul.flex-ul li {
 	font-size: 17px;
-	color: #52505e;
 }
 
-footer div.container ul.flex-ul ul:last-child {
-	margin-right: 0vh;
+footer div.container ul.flex-ul li span.url-begin {
+  color: #52505e;
 }
 
+footer div.container ul.flex-ul li span.url-end {
+  color: black;
+}
 
 footer div.container p.copyright {
+  margin:0;
+  text-align:center;
 	color: #52505e;
 	align-self: flex-end;
-}
-
-footer div.container ul.flex-ul h3 {
-	color: black;
-	position: relative;
-}
-
-footer div.container ul.flex-ul h3::before {
-	content: "";
-	position: absolute;
-	left: 0;
-	bottom: -10px;
-	width: 30px;
-	height: 3px;
-
-	background-color: #ecab9e;
-}
-
-
-footer div.container ul.flex-ul h3:hover:before {
-	width: 100px;
-	height: 2px;
-
-	transition: 0.3s all;
-}
-
-
-footer div.container div.pp {
-	flex: 0.7;
-}
-
-footer div.container div.pp img {
-	display: block;
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	border: 3px solid #ecab9e;
-
-	margin: 5% auto;
 }
