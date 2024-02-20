@@ -6,11 +6,7 @@
  
      overflow: hidden;
  }
- @media (max-width: 800px) {
-     .container-carousel {
-         margin:2% 0%;
-     }
- }
+ 
  .carousel {
      position: relative;
    border:5px solid #fde7e1;
@@ -122,4 +118,18 @@
  }
  .container-carousel ul li.langage-python svg {
    color:orange;
+ }
+ 
+ @media (max-width: 800px) {
+     .container-carousel {
+         margin:2% 0%;
+     }
+   
+   .carousel {
+     border:none;
+   }
+   
+   .carousel-controls {
+     display:none;
+   }
  }

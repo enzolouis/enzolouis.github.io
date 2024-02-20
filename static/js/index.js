@@ -44,7 +44,13 @@ let scroll = window.requestAnimationFrame ||
 var elementsToShow = document.querySelectorAll(".image-scroll");
 var timelineToShow = document.querySelectorAll(".content");
 
+
 function loop() {
+  if (isElementInViewport2(document.getElementById("frise"))) {    
+      document.getElementById("test").style.display = "block";
+  } else {
+      document.getElementById("test").style.display = "none";
+  }
   elementsToShow.forEach(function (element) {
     if (isElementInViewport(element)) {
       element.classList.remove("image-scroll-invisible");
@@ -73,6 +79,17 @@ function isElementInViewport(el) {
   let rect = el.getBoundingClientRect();
     let elementHeight = rect.bottom - rect.top;
     let offset = elementHeight - 100;
+    return (
+        rect.bottom-offset <= (window.innerHeight) &&
+        rect.top+offset >=0
+    );
+}
+
+/* pour le truc qui se déplace sur la frise */
+function isElementInViewport2(el) {
+  let rect = el.getBoundingClientRect();
+    let elementHeight = rect.bottom - rect.top;
+    let offset = elementHeight - 400;
     return (
         rect.bottom-offset <= (window.innerHeight) &&
         rect.top+offset >=0
