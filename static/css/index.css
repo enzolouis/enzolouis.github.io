@@ -34,47 +34,47 @@ div.welcome-image h1 {
   text-align:center;
 }
 
-div.welcome-image h1 p {
-  font-weight:700;
-  align-self:center;
-}
-
 div.welcome-image h1::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top:15%;
-  width: 10px;
-  height: 5%;
-  background: white;
+  content: "";position: absolute;left: 50%;top:15%;width: 10px;height: 5%;background: white;
 }
 div.welcome-image h1::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom:15%;
-  width: 10px;
-  height: 5%;
-  background: white;
+  content: "";position: absolute;left: 50%;bottom:15%;width: 10px;height: 5%;background: white;
 }
 
-div.welcome-image h1 p::before {
-  content: "";
-  position: absolute;
-  left: 5%;
-  top:50%;
-  width: 5%;
-  height: 10px;
-  background: white;
+div.welcome-image h1 div#container-welcome {
+  font-weight:700;
+  align-self:center;
+  
+  display:flex;
+  align-items:center;
+  width:40%;
 }
-div.welcome-image h1 p::after {
-  content: "";
-  position: absolute;
-  right: 5%;
-  top:50%;
-  width: 5%;
-  height: 10px;
-  background: white;
+
+div.welcome-image h1 div#container-welcome-image {
+  flex:0.5;
+  animation: animatename 1s linear infinite;
+  
+}
+
+div.welcome-image h1 div#container-welcome-image img {
+  width:200px;
+  height:200px;
+}
+
+div.welcome-image h1 div#container-welcome-text {
+  flex:0.5;
+  font-size:25px;
+  text-align:left;
+}
+
+
+@keyframes animatename{
+  0%{
+    transform: translateY(500px);
+  }
+  5%{
+    transform: translateY(300px);
+  }
 }
 
 
