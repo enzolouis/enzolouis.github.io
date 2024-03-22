@@ -6,10 +6,11 @@ footer {
 	clear: both; /* POUR NE PAS ETRE INFLUENCE PAR LE FLOAT */ 
 	margin-bottom: 0; /* POUR NE PAS ETRE INFLUENCE PAR LE FLOAT */
 
-	background-color: #fde7e1;
 	padding: 10px 0 5px 0;
 	display: block;
-  border-top:1px solid #ecab9e;
+  
+  background-color: var(--white);
+  border-top:1px solid var(--green);
 
 	margin-top: auto; /* MISE EN PLACE DU DISPLAY FLEX POUR COLLER LE FOOTER EN BAS DE PAGE QUAND LA PAGE EST COURTE */
 }

@@ -1,0 +1,35 @@
+#profile .content {
+  background-color:white;
+  margin: 0 15%;
+}
+
+#profile .content h2 {
+  margin: 0 15%;
+  padding:5%;
+  text-align:center;
+}
+
+#profile {
+  background-color:var(--very-dark-green);
+  padding-bottom:10%;  
+}
+
+#profile .two-sides {
+  text-align:justify;
+  font-size:16px;
+  display:flex;
+  flex-flow:row wrap;
+}
+
+#profile .two-sides div {
+  flex:1 0 20%;
+  padding:5%;
+  color:#666666;
+}
+
+#profile .two-sides div:nth-child(1) {
+  border-right:1px solid #d8d8d8;
+}
+#profile .two-sides div:nth-child(2) {
+  border-left:1px solid #d8d8d8;
+}

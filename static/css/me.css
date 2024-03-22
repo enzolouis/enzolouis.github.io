@@ -1,0 +1,178 @@
+
+
+div#me {
+  background-color:var(--grey);
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:space-evenly;
+  align-items:center;
+  text-align:center;
+  height:100vh;
+}
+
+
+
+div#me > div {
+  flex:0 0 25%;
+}
+
+div#me > .content-title {
+  flex:0 0 100%;
+  font-size:40px;
+  color:var(--green);
+  padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+div#me svg {
+  font-size:30px;
+}
+
+div#me p {
+  color:#708390;
+}
+
+.img-me-profile {
+  border-radius:5px;
+}
+
+
+.zoom-container-div {
+  overflow: hidden;
+}
+
+.zoom-div {
+  display: flex;
+  flex-flow:row wrap;
+  justify-content: center;
+  transform: scale(2);
+  transition: transform 0.8s ease;
+  gap:10px;
+}
+
+.zoom-div img {
+}
+
+.zoom-container-div:hover .zoom-div {
+  transform: scale(0.8);
+}
+
+
+/* tests bulle d'infos */
+
+.me-popup {
+  position:relative;
+  flex:0 0 17%;
+}
+
+.me-popup img {
+  width:100%;
+  /*height:100%;*/
+}
+
+.me-popup::after {
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition:all 0.1s linear;
+  content:"Python";
+  display:flex;
+  align-items:center;
+  justify-content:center;  position:absolute;
+  width:0px;
+  height:0px;
+  overflow:hidden;
+  border-radius:5px;
+  bottom:0;
+  left:0;
+  background:rgba(66, 65, 77, 0.6);
+  color:white;
+  /* marche pas */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  /*font-size:16px;*/
+}
+
+/* AVEC js */
+.me-popup.open::after {
+  height:100%;
+  width:100%;
+}
+/* -- */
+
+.me-popup:hover::after {
+  height:100%;
+  width:100%;
+}
+
+.me-popup#python::after {
+  content:"Python";
+}
+
+.me-popup#java::after {
+  content:"Java";
+}
+
+.me-popup#ada::after {
+  content:"Ada";
+}
+
+.me-popup#php::after {
+  content:"Php";
+}
+
+.me-popup#javascript::after {
+  content:"Java Script";
+}
+
+.me-popup#html::after {
+  content:"HTML";
+}
+
+.me-popup#css::after {
+  content:"CSS";
+}
+
+.me-popup#ajax::after {
+  content:"Ajax";
+}
+
+.me-popup#django::after {
+  content:"Django (Avec Python)";
+}
+
+.me-popup#flask::after {
+  content:"Flask (Avec Python)";
+}
+
+.me-popup#php2::after {
+  content:"Php";
+}
+.me-popup#apirest::after {
+  content:"API Rest";
+}
+
+
+.me-popup#qt::after {
+  content:"Qt (Avec Python)";
+}
+
+.me-popup#jswing::after {
+  content:"Java Swing";
+}
+
+.me-popup#sql::after {
+  content:"SQL";
+}
+
+.me-popup#mysql::after {
+  content:"MySql (SGBD)";
+}
+
+.me-popup#sqlite::after {
+  content:"Sqlite (SGBD)";
+}
+
+.me-popup#oracle::after {
+  content:"Oracle (SGBD)";
+}

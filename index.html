@@ -1,427 +1,384 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Enzo Louis</title>
-	<link rel="stylesheet" type="text/css" href="./static/css/styles.css">
-	<link rel="stylesheet" type="text/css" href="./static/css/index.css">
-	<link rel="stylesheet" type="text/css" href="./static/css/carousel.css">
-  <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/f362b9f8-8f4b-4a85-b6ed-a342b3440d20/logo-enzo.jpg?v=1647176007735">
-	<script defer src="https://use.fontawesome.com/releases/v6.4.2/js/all.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enzo Louis</title>
+  <link rel="stylesheet" type="text/css" href="./static/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/65914622?v=4">
+  <script defer src="https://use.fontawesome.com/releases/v6.4.2/js/all.js"></script>
   <script src="./static/js/carousel.js" async></script>
 </head>
-<body onload="removeAbsBackground()">
-  <div id="absoluteBackground">
-      
+<body><!-- onload="removeAbsBackground()">
+  <!--<div id="absoluteBackground"></div>-->
+  <div class="loader-container"> <!-- Conteneur pour le loader -->
+    <img width=250 src="static/images/star2.png">
+    <!--
+    <div class="cube">
+      <div class="face front"></div>
+      <div class="face back"></div>
+      <div class="face top"></div>
+      <div class="face bottom"></div>
+      <div class="face left"></div>
+      <div class="face right"></div>
     </div>
-	<header class="mediascreen">
-		<div id="visible">
-			<div>
-				<img src="https://avatars.githubusercontent.com/u/65914622?v=4">
-				<span>Enzo</span><span>LOUIS</span>
-			</div>
+  --></div>
+
+
+</div>
+  
+  <header class="mediascreen">
+    <div id="visible">
+      <div>
+        <img src="https://avatars.githubusercontent.com/u/65914622?v=4">
+        <span>Enzo</span><span>LOUIS</span>
+      </div>
       <nav id="nav">
-				<ul>
-          <li id="currentPage"><a href="#mesprojets">Mes projets</a></li>
-					<li><a href="#formations">Moi</a></li>
-					<li><a href="#formations">Formations</a></li>
-					<li><a href="#formations">Mes </a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>
+        <ul>
+          <li id="currentPage"><a href="#me">Moi</a></li>
+          <li><a href="#projects">Mes projets</a></li>
+          <li><a href="#profile">Mon profil</a></li>
+          <li><a href="#outoffrise">Ma timeline</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
       
-			<button onclick="showHamburgerNavBar()" class="hamburger">
-				<i class="fas fa-bars"></i>
-			</button>
-		</div>
-		<div id="invisible">
-			<nav>
-				<ul>
-					<li><a href="#">Lien lien lien lien lien</a></li>
-					<li><a href="#">Lien lien lien lien lien</a></li>
-					<li><a href="#">Lien lien lien lien lien</a></li>
-				</ul>
-			</nav>
-			<div class="nav-buttons">
-				<a class="button-1" href="#">Se connecter</a>
-				<a class="button-2" href="#">S'inscrire</a>
-			</div>
+      <button onclick="showHamburgerNavBar()" class="hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="invisible">
+      <nav>
+        <ul>
+          <li><a href="#me">Moi</a></li>
+          <li><a href="#projects">Mes projets</a></li>
+          <li><a href="#profile">Mon profil</a></li>
+          <li><a href="#outoffrise">Ma timeline</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
 
-		</div>
-
-	</header>
+  </header>
 
 
 
 
-
-
-
-
-
-
-
-
-	<main>
-		<div class="welcome-image">
-			<h1>
-        <div id="container-welcome">
-          <div id="container-welcome-image">
-				    <img src="https://avatars.githubusercontent.com/u/65914622?v=4">
-          </div>
-          <div id="container-welcome-text">
-            <span style="font-weight:bold;font-size:40px">Hello!</span><br>
-            I'm Enzo, a junior developer based in Toulouse
-          </div>
-        </div>
-      </h1>
-      
-      <div class="body">
-      
-        <div class="content-title" > <!-- section -->
-          Mes projets<br><br>
-        </div>
-        
-        <div class="container-carousel">
-            <div class="carousel">
-                <div class="carousel-inner">
-                  <div class="slide">
-                      <h2>
-                        Horloge avec QT
-                      </h2>
-                        <img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/timeout.PNG?v=1696103378070"
-                            alt="Image 3">
-                      <div>
-                        Description du projet ... 
-                      </div>
-                    </div>
-                    <div class="slide">
-                      <h2>
-                        Métronome avec QT, en Python
-                      </h2>
-                        <img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/metronome.png?v=1696096562328"
-                            alt="Image 1">
-                      <div>
-                        Description du projet ... 
-                      </div>
-                    </div>
-                    <div class="slide">
-                      <h2>
-                        Simulateur de 3d avec PyGame
-                      </h2>
-                        <img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/pseudo3d.PNG?v=1696096812367"
-                            alt="Image 2">
-                      <div>
-                        Description du projet ... 
-                      </div>
-                    </div>
-                    <div class="slide">
-                      <h2>
-                        Editeur de code basique avec QT
-                      </h2>
-                        <img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/quickcode.PNG?v=1696105055505"
-                            alt="Image 4">
-                      <div>
-                        Description du projet ... 
-                      </div>
-                    </div>
-                    <div class="slide">
-                      <h2>
-                        Calculatrice avec Parser/Lexer
-                      </h2>
-                        <img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/calculatrice.PNG?v=1696935683683"
-                            alt="Image 5">
-                      <div>
-                        Description du projet ... 
-                      </div>
-                    </div>
-                    <div class="slide">
-                      <h2>
-                        Remix de pastebin.com
-                      </h2>
-                        <img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/asfix_pasterbin.PNG?v=1696935945888"
-                            alt="Image 5">
-                      <div>
-                        Description du projet ... <ul class="langages"><li class="langage-python"><i class="fa-solid fa-circle"></i> Python</li>
-              <li class="langage-html"><i class="fa-solid fa-circle"></i> HTML</li>
-              <li class="langage-css"><i class="fa-solid fa-circle"></i> CSS</li>
-              <li class="langage-js"><i class="fa-solid fa-circle"></i> JS</li>
-                        <li class="langage-python-django"><i class="fa-solid fa-circle"></i> Django Framework</li></ul>
-                      </div>
-                    </div>
-                    <div class="slide">
-                      <h2>
-                        Application de chat en LAN
-                      </h2>
-                        <img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/quickcode.PNG?v=1696105055505"
-                            alt="Image 5">
-                      <div>
-                        Description du projet ... 
-                      </div>
-                    </div>
-                </div>
-                <div class="carousel-controls">
-                    <button id="prev"></button>
-                    <button id="next"></button>
-                </div>
-                <div class="carousel-dots"></div>
-              
-            </div>
-        </div>
-
-        <!--
-        <div class="boxes">
-          <div class="box image-scroll image-scroll-invisible">
-            <h2>Simulateur de 3d avec PyGame</h2>
-            <img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/pseudo3d.PNG?v=1696096812367">
-            <p>Description Image</p>
-            <ul class="langages">
-              <li class="langage-python"><i class="fa-solid fa-circle"></i> Python</li>
-            </ul>
-          </div>
-
-          <div class="box image-scroll image-scroll-invisible" id="proj-horloge">
-            <h2>Horloge avec QT</h2>
-            <img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/timeout.PNG?v=1696103378070">
-            <p>Description Image</p>
-            <ul class="langages">
-              <li class="langage-python"><i class="fa-solid fa-circle"></i> Python</li>
-            </ul>
-          </div>
-
-          <div class="box image-scroll image-scroll-invisible" id="proj-codeeditor">
-            <h2>Editeur de code basique avec QT</h2>
-            <img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/quickcode.PNG?v=1696105055505">
-            <p>Editeur de code basique</p>
-            <ul class="langages">
-              <li class="langage-python"><i class="fa-solid fa-circle"></i> Python</li>
-            </ul>
-          </div>
-          
-          <div class="box image-scroll image-scroll-invisible">
-            <h2>Remix de pastebin.com</h2>
-            <img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/asfix_pasterbin.PNG?v=1696935945888">
-            <p>Editeur de code basique</p>
-            <ul class="langages">
-              <li class="langage-python"><i class="fa-solid fa-circle"></i> Python</li>
-              <li class="langage-html"><i class="fa-solid fa-circle"></i> HTML</li>
-              <li class="langage-css"><i class="fa-solid fa-circle"></i> CSS</li>
-              <li class="langage-js"><i class="fa-solid fa-circle"></i> JS</li>
-              <li class="langage-python-django"><i class="fa-solid fa-circle"></i> Django Framework</li>
-            </ul>
-          </div>
-          
-          <div class="box image-scroll image-scroll-invisible">
-            <h2>Calculatrice avec Parser/Lexer</h2>
-            <img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/calculatrice.PNG?v=1696935683683">
-            <p>Description Image</p>
-            <ul class="langages">
-              <li class="langage-python"><i class="fa-solid fa-circle"></i> Python</li>
-            </ul>
-          </div>
-          
-          
-          
-          <div class="box image-scroll image-scroll-invisible" id="proj-metronome">
-            <h2>Métronome avec QT, en Python</h2>
-            <img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/metronome.png?v=1696096562328">
-            <p>Description Image</p>
-            <ul class="langages">
-              <li class="langage-python"><i class="fa-solid fa-circle"></i> Python</li>
-            </ul>
-          </div>
-          
-          <div class="box image-scroll image-scroll-invisible" id="proj-chatapp">
-            <h2>Application de chat en LAN</h2>
-            <img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/quickcode.PNG?v=1696105055505">
-            <p>Description</p>
-            <ul class="langages">
-              <li class="langage-python"><i class="fa-solid fa-circle"></i> Python</li>
-            </ul>
-          </div>
-          
-        </div>-->
-
-
-      </div>
-      
-      <div class="body2">
-        <div class="content-title">
-          Contenu principale
-        </div>
-        
-        <div class="two-sides">
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-          </div>
-          
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-          </div>
-        </div>
-      </div>
-      <div class="body2 body3">
-        <div class="content-title">
-          Contenu principale
-        </div>
-        
-        <div class="two-sides">
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-          </div>
-          
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-          </div>
-        </div>
-      </div>
-      
-      
-      <div id="outoffrise">
-        <div class="content-title">
-          <p>
-            Ma timeline de développeur
-          </p>
-          <img src="https://avatars.githubusercontent.com/u/65914622?v=4">          
-        </div>
-        <div id="test" style="display:none;position:fixed;top:40%;left:50%;transform: translate(-50%,0);z-index:200000000">
-            <img width="40" src="https://avatars.githubusercontent.com/u/65914622?v=4">
-          </div>
-        
-        <div id="frise">
-          
-        
-          <div class="element">
-            <div class="inside">
-              <div class="content">
-                <p class="time year">2019</p>
-                <p class="time">Mai</p>
-                <h2><i class="fa-solid fa-brain"></i>Apprentisage avancé du langage Python</h2>
-                <p class="descr">Début d'apprentissage en 2019 poursuivi en 2020</p>
-              </div>
-            </div>
-          </div>
-          <div class="element">
-            <div class="inside">
-              <div class="content">
-                <p class="time year">2020</p>
-                <p class="time">Janvier</p>
-                <h2><i class="fa-solid fa-brain"></i>Apprentissage avancé de HTML-CSS</h2>
-                <p class="descr">Texte texte texte</p>
-              </div>
-            </div>
-          </div>
-          <div class="element">
-            <div class="inside">
-              <div class="content">
-                <p class="time">Avril</p>
-                <h2><i class="fa-solid fa-brain"></i>Apprentissage des bases de C#</h2>
-                <p class="descr">Texte texte texte</p>
-              </div>
-            </div>
-          </div>
-          <div class="element">
-            <div class="inside">
-              <div class="content">
-                <p class="time">Juillet</p>
-                <h2><i class="fa-solid fa-brain"></i>Apprentissage de la framework Django</h2>
-                <p class="descr">Texte texte texte</p>
-              </div>
-            </div>
-          </div>
-          <div class="element">
-            <div class="inside">
-              <div class="content">
-                <p class="time">Août</p>
-                <h2><i class="fa-solid fa-brain"></i>Apprentissage des bases du JavaScript</h2>
-                <p>Texte texte texte</p>
-                <h2><i class="fa-solid fa-diagram-project"></i>Projet de chat app avec Socket</h2>
-                <p class="descr">Texte texte texte <a href="#proj-chatapp">click</a></p>
-               <!--<img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/quickcode.PNG?v=1696105055505">-->
-              </div>
-            </div>
-          </div>
-          <div class="element">
-            <div class="inside">
-              <div class="content">
-                <p class="time year">2021</p>
-                <p class="time">Janvier</p>
-                <h2><i class="fa-solid fa-diagram-project"></i>Projets d'editeur de code</h2>
-                <p class="descr">Texte texte texte <a href="#proj-codeeditor">click</a></p>
-                <!--<img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/quickcode.PNG?v=1696105055505">-->
-              </div>
-            </div>
-          </div>
-          <div class="element">
-            <div class="inside">
-              <div class="content">
-                <p class="time">Juillet</p>
-                <h2><i class="fa-solid fa-diagram-project"></i>Projets d'application d'Horloge comprenant chronomètre, minuteur, heure</h2>
-                <p class="descr">Texte texte texte <a href="#proj-horloge">click</a></p>
-                <!--<img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/timeout.PNG?v=1696103378070">-->
-              </div>
-            </div>
-          </div>
-          <div class="element">
-            <div class="inside">
-              <div class="content">
-                <p class="time year">2022</p>
-                <p class="time">Janvier</p>
-                <h2><i class="fa-solid fa-diagram-project"></i>Projet Métronome</h2>
-                <p class="descr">Texte texte texte<a href="#proj-metronome">click</a></p>
-                <!--<img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/metronome.png?v=1696096562328">-->
-              </div>
-            </div>
-          </div>
-          <div class="element">
-            <div class="inside">
-              <div class="content">
-                <p class="time">Septembre</p>
-                <h2><i class="fa-solid fa-brain"></i>Apprentissage de SQL</h2>
-                <p class="descr">Texte texte texte</p>
-                <h2><i class="fa-solid fa-brain"></i>Apprentissage des bases du ADA</h2>
-                <p class="descr">Texte texte texte</p>
-              </div>
-            </div>
-          </div>
-          <div class="element">
-            <div class="inside">
-              <div class="content">
-                <p class="time">Octobre</p>
-                <h2><i class="fa-solid fa-brain"></i>Apprentissage des bases du Langage Shell</h2>
-                <p class="descr">Texte texte texte</p>
-              </div>
-            </div>
-          </div>
-          <div class="element">
-            <div class="inside">
-              <div class="content">
-                <p class="time year">2023</p>
-                <p class="time">Janvier</p>
-                <h2><i class="fa-solid fa-brain"></i>Apprentissage des bases du Langage C</h2>
-                <p class="descr">Texte texte texte</p>
-              </div>
-            </div>
-          </div>
-          <div class="element">
-            <div class="inside">
-              <div class="content">
-                <p class="time">Février</p>
-                <h2><i class="fa-solid fa-brain"></i>Apprentissage du Java</h2>
-                <p class="descr">Texte texte texte</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      
-      
-		</div>
+  <main>
+    <button onclick="topFunction()" id="top_button" title="Go to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
     
     
-	</main>
+    <section id="welcome">
+      
+      <img id="greenboard-stars" src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/stars5.png?v=1709499419839">
+      <div style="display:flex;flex-flow:row wrap;justify-content:space-around;align-items:center;">
+        <div style="flex:1 0 100%;">
+          <span id="welcome-title">Salut!</span><br>
+          <span id="welcome-sentence">Je suis Enzo LOUIS, un développeur junior situé à Toulouse</span>
+        </div>
+      </div>
+      
+    </section>
+
+    <div class="separator reverse sep1"></div>
+
+    <div id="me">
+      <div class="content-title">
+        Mes domaines
+      </div>
+      <div>
+        <i class="fa-solid fa-terminal"></i>
+        <h2>Programmeur</h2>            
+        <div class="zoom-container-div">
+          <div class="zoom-div">
+            <div class="me-popup" id="python">
+              <img class="img-me-profile" src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/python.jpg?v=1708713939698">
+            </div>
+            <div class="me-popup" id="java">
+              <img class="img-me-profile" src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/java.png?v=1708714755957">
+            </div>
+            <div class="me-popup" id="ada">
+              <img class="img-me-profile" src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/ada.png?v=1708799507466">
+            </div>
+            <div class="me-popup" id="php">
+              <img class="img-me-profile" src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/php.png?v=1708804868515">
+            </div>
+          </div>
+        </div>
+        <p>
+          Avec des bases en C, Bash et C#
+        </p>
+      </div>
+
+      <div>
+        <i class="fa-solid fa-code"></i>
+        <h2>
+          Développeur Front-end
+        </h2>
+        <div class="zoom-container-div">
+          <div class="zoom-div">
+            <div class="me-popup" id="javascript">
+              <img class="img-me-profile" src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/javascript.png?v=1708799322028">
+            </div>
+            <div class="me-popup" id="html">
+              <img class="img-me-profile" src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/html.png?v=1708799852154">
+            </div>
+            <div class="me-popup" id="css">
+              <img class="img-me-profile" src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/css.png?v=1708800046053">
+            </div>
+            <div class="me-popup" id="ajax">
+              <img class="img-me-profile" src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/ajax.png?v=1708803823167">
+            </div>
+          </div>
+        </div>
+        <p>
+          
+        </p>
+      </div>
+      <div>
+        <i class="fa-solid fa-gears"></i>
+        <h2>
+          Développeur Back-end
+        </h2>
+        <div class="zoom-container-div">
+          <div class="zoom-div">
+            <div class="me-popup" id="django">
+              <img class="img-me-profile" src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/django.png?v=1708715821165">
+            </div>
+            <div class="me-popup" id="flask">
+              <img class="img-me-profile" src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/flask.png?v=1708715106818">
+            </div>
+            <div class="me-popup" id="php2">
+              <img class="img-me-profile" src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/php.png?v=1708804868515">
+            </div>
+            <div class="me-popup" id="apirest">
+              <img class="img-me-profile" src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/apirest.jpg?v=1708985108415">
+            </div>
+          </div>
+        </div>
+        <p>
+          
+        </p>
+      </div>
+      <div>
+        <i class="fa-solid fa-window-restore"></i>
+        <h2>
+          Designer logiciel
+        </h2>
+        <div class="zoom-container-div">
+          <div class="zoom-div">
+            <div class="me-popup" id="qt">
+              <img class="img-me-profile" src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/qt.png?v=1708715992144">
+            </div>
+            <div class="me-popup" id="jswing">
+              <img class="img-me-profile" src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/jswing.png?v=1708937394293">
+            </div>
+
+          </div>
+        </div>
+        <p>
+          Et des bases en développement mobile
+        </p>
+      </div>
+      <div>
+        <i class="fa-solid fa-database"></i>
+        <h2>
+          Administrateur base de données
+        </h2>
+        <div class="zoom-container-div">
+          <div class="zoom-div">
+            <div class="me-popup" id="sql">
+              <img class="img-me-profile" src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/sql3.png?v=1708979913159">
+            </div>
+            <div class="me-popup" id="mysql">
+              <img class="img-me-profile" src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/mysql.png?v=1708980434226">
+            </div>
+            <div class="me-popup" id="sqlite">
+              <img class="img-me-profile" src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/sqlite3.jpg?v=1708981320766">
+            </div>
+            <div class="me-popup" id="oracle">
+              <img class="img-me-profile" src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/oracle.png?v=1708981977801">
+            </div>
+
+          </div>
+        </div>
+        <p>
+          
+        </p>
+      </div>
+    </div>
+
+
+    <div class="separator sep2"></div>
+    <div id="projects">
+      <div class="content-title" > <!-- section -->
+        Mes projets
+      </div>
+      <div class="container-carousel">
+          <div class="carousel">
+              <div class="carousel-inner">
+                <div class="slide">
+                  <h2><span style="font-family:'Permanent Marker', cursive">Embin</span> : Site de partage de code (Remix de pastebin.com)</h2>
+                  <img src="static/images/myprojects/embin3.png" alt="Image 5">
+                </div>
+                <div class="slide">
+                  <h2><span style="font-family:'Permanent Marker', cursive">Proxichat</span> : Chat en réseau LAN</h2>
+                  <img src="static/images/myprojects/proxichat.png" alt="Image 3">
+                </div>
+                <div class="slide">
+                  <h2>Réseau social avec Php et MySql</h2>
+                  <img src="static/images/myprojects/socialnetworkweb.png" alt="Image 3">
+                </div>
+                <div class="slide">
+                  <h2>Métronome avec QT, en Python</h2>
+                  <img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/metronome3.png?v=1709414299178" alt="Image 1">
+                </div>
+                <div class="slide">
+                  <h2>Site de gestion d'un cabinet médical avec API</h2>
+                  <img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/recherchecreationlogin.png?v=1709659369854" alt="Image 5">
+                </div>
+                <div class="slide">
+                  <h2>Application complète de gestion de tournoi en Java</h2>
+                  <img src="static/images/myprojects/sae.png" alt="Image 3">
+                </div>
+                <div class="slide">
+                  <h2>Démineur, Snake, Blockudoku avec JavaSwing</h2>
+                  <img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/demineur_snake_blockudoku.png?v=1709593447174" alt="Image 5">
+                </div>
+                <div class="slide">
+                  <h2>Horloge avec QT</h2>
+                  <img src="static/images/myprojects/horloge.png" alt="Image 3">
+                </div>
+                <div class="slide">
+                  <h2>Simulateur de 3d avec PyGame</h2>
+                  <img src="static/images/myprojects/simulateur3D.png" alt="Image 2">
+                </div>
+                <div class="slide">
+                  <h2>Editeur de code basique avec QT</h2>
+                  <img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/quickcode.PNG?v=1696105055505" alt="Image 4">
+                </div>
+                <div class="slide">
+                  <h2>Calculatrice avec Parser/Lexer</h2>
+                  <img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/calculatrice.PNG?v=1696935683683" alt="Image 5">
+                </div>
+              </div>
+              <div class="carousel-controls">
+                  <button id="prev"></button>
+                  <button id="next"></button>
+              </div>
+              <div class="carousel-dots"></div>
+          </div>
+      </div>
+    </div>
+
+    <div class="separator sep3"></div>
+
+    <div id="profile">
+      <div class="content-title">
+        Mon profil
+      </div>
+
+      <div class="content">
+        <h2>
+          19 ans, 5 ans de programmation, à la recherche d'un stage
+        </h2>
+        <div class="two-sides">
+          <div>
+            Je suis dans le développement informatique depuis à peu près 5 ans.
+            J'ai découvert Python lors de mes début lorsque j'étais au lycée, puis HTML et CSS.
+            Ensuite, arrivé à l'IUT Informatique de Toulouse (<a href="https://www.univ-tlse3.fr/">Université III Paul Sabatier</a>),
+            j'ai découvert davantages de langages, technologies, ...
+          </div>
+
+          <div>
+            Actuellement étudiant en 2ème année de BUT Informatique, je souhaite accomplir un Master.<br><br>
+            Je n'ai toujours pas de réelle expériences professionnelles, à part un stage en 2019, où j'ai pu découvrir le SQL
+            principalement
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="separator reverse sep4"></div>
+    
+    <div id="outoffrise">
+      <div class="content-title">
+        Ma timeline de développeur
+      </div>
+      <div class="header-frise">
+        <p>
+          Mai 2019
+        </p>
+        <img src="https://avatars.githubusercontent.com/u/65914622?v=4">          
+      </div>
+      <div id="test" style="display:none;position:fixed;top:40%;left:50%;transform: translate(-50%,0);z-index:200000000">
+          <img width="40" src="https://avatars.githubusercontent.com/u/65914622?v=4">
+        </div>
+
+      <div id="frise">
+        <div class="element">
+          <div class="inside">
+            <div class="content">
+              <p class="time year">2019</p>
+              <p class="time">Mai</p>
+              <h2><i class="fa-solid fa-brain"></i>Premier pas avec le code avec le langage Python</h2>
+              <p class="descr">Début d'apprentissage en 2019 poursuivi en 2020</p>
+            </div>
+          </div>
+        </div>
+        <div class="element">
+          <div class="inside">
+            <div class="content">
+              <p class="time">Juin</p>
+              <h2><i class="fa-solid fa-brain"></i>Stage dans l'entreprise ParinetInformatique à Périgueux</h2>
+              <p class="descr">Première approche de SQL</p>
+            </div>
+          </div>
+        </div>
+        <div class="element">
+          <div class="inside">
+            <div class="content">
+              <p class="time">Septembre</p>
+              <h2><i class="fa-solid fa-brain"></i>Baccalauréat technologique STI2D option SIN (Système Informatique Numérique)</h2>
+              <p class="descr">Apprentissage des bases du web, du C++ et de l'informatique embarqué</p>
+            </div>
+          </div>
+        </div>
+        <div class="element">
+          <div class="inside">
+            <div class="content">
+              <p class="time year">2020</p>
+              <p class="time">A partir de juillet</p>
+              <h2><i class="fa-solid fa-brain"></i>Apprentissage du web front-end et back-end, ainsi que des bases de C#</h2>
+              <p class="descr">Apprentissage de HTML, CSS et JavaScript en front et de Python avec Flask, Django, Sqlite(SQL) en back-end</p>
+            </div>
+          </div>
+        </div>
+        <div class="element">
+          <div class="inside">
+            <div class="content">
+              <p class="time year">2022</p>
+              <p class="time">Septembre</p>
+              <h2><i class="fa-solid fa-brain"></i>1ère année de BUT Informatique</h2>
+              <p class="descr">Apprentissage de Java, C, ADA, SQL</p>
+            </div>
+          </div>
+        </div>
+        <div class="element">
+          <div class="inside">
+            <div class="content">
+              <p class="time year">2023</p>
+              <p class="time">Septembre</p>
+              <h2><i class="fa-solid fa-brain"></i>2ème année de BUT Informatique</h2>
+              <p class="descr">Apprentissage de JavaScript, Php, API, Ajax</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
 
 
@@ -433,35 +390,44 @@
 
 
 
+  <footer id="contact">
+    <!-- DIV CONTAINER POUR EVITER DE METTRE TOUT LE FOOTER EN FLEX -> AFIN DE LE METTRE EN DISPLAY:BLOCK; pour ajouter un :before, :after -->
+    <div class="container">
+      
 
-
-
-
-
-
-
-
-	<footer>
-		<div class="container"> <!-- DIV CONTAINER POUR EVITER DE METTRE TOUT LE FOOTER EN FLEX -> AFIN DE LE METTRE EN DISPLAY:BLOCK; pour ajouter un :before, :after -->
-			
-
-			<ul class="flex-ul">
-        <li><a href="#"><i class="fa-brands fa-linkedin"></i> <span class="url-begin">linkedin.com/in/</span><span class="url-end">enzolouis</span></a></li>
-        <li><a href="#"><i class="fa-solid fa-at"></i> <span class="url-end">enzo.louis2212</span><span class="url-begin">@gmail.com</span></a></li>
-        <li><a href="#"><i class="fa-brands fa-github"></i> <span class="url-begin">github.com/</span><span class="url-end">enzolouis</span></a></li>
-        <li><a href="#"><i class="fa-solid fa-file"></i> <span class="url-begin">CV de </span><span class="url-end">Enzo Louis</span></a></li>
-			</ul>
+      <ul class="flex-ul">
+        <li>
+          <a href="https://www.linkedin.com/in/enzolouis">
+            <i class="fa-brands fa-linkedin"></i> <span class="url-begin">linkedin.com/in/</span><span class="url-end">enzolouis</span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:enzo.louis2212@gmail.com">
+            <i class="fa-solid fa-at"></i> <span class="url-end">enzo.louis2212</span><span class="url-begin">@gmail.com</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/enzolouis">
+            <i class="fa-brands fa-github"></i> <span class="url-begin">github.com/</span><span class="url-end">enzolouis</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/CV-EnzoLOUIS.pdf?v=1709422597517">
+            <i class="fa-solid fa-file"></i> <span class="url-begin">CV de </span><span class="url-end">Enzo Louis</span>
+          </a>
+        </li>
+      </ul>
       
       <p class="copyright">
-				<small>
-					&copy Enzo Louis 2023
-				</small>
-			</p>
-		</div>
-	</footer>
+        <small>
+          &copy Enzo Louis 2024
+        </small>
+      </p>
+    </div>
+  </footer>
 
 
-	<script type="text/javascript" src="static/js/index.js"></script>
+  <script type="text/javascript" src="static/js/index.js"></script>
 
 </body>
 </html>

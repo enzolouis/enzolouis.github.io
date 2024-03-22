@@ -1,0 +1,118 @@
+
+div#outoffrise {
+  padding-bottom:50px;
+  background-color:var(--white);
+}
+
+#outoffrise .content-title {
+  color:var(--green) !important;
+}
+
+div#outoffrise .header-frise {
+  text-align:center;
+  
+  color:var(--dark-green);
+}
+
+div#outoffrise .header-frise p {
+  margin:10px;
+}
+
+div#outoffrise .header-frise > img {
+  display:block;
+  margin:auto;
+  width:40px;
+  border-radius:50%;
+}
+
+div#frise {
+  position:relative;
+  width:90%; /* 100% ? */
+  margin:0 auto;
+  overflow:hidden;
+  padding:2%;
+  
+  color:#52505e;
+  background:white;
+}
+
+
+div#frise > div::before {
+  content:"";
+  position:absolute;
+  z-index:1;
+  left:50%;
+  transform:translate(-50%, 0);
+  width:15px;
+  height:15px;
+  background:#ecab9e;
+  border-radius:50%;
+  
+  background: var(--dark-green);
+  background: linear-gradient(180deg, var(--green) 0%, var(--dark-green) 50%, var(--green) 100%);
+}
+
+div#frise > div > div::before {
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translate(-50%, 0);
+  width:5px;
+  height:100%;
+  background:#fde7e1;
+  
+  background: var(--dark-green);
+  background: linear-gradient(180deg, var(--green) 0%, var(--dark-green) 50%, var(--green) 100%);
+}
+
+
+div#frise div h2 svg {
+  margin-right:7px;
+}
+
+div#frise div .time {
+  color:var(--green);
+}
+
+div#frise div .year {
+  color:var(--green);
+  font-size:25px;
+  margin:0;
+}
+
+div#frise > div.element > div.inside > div.content {
+  padding-bottom:2%;
+  padding-top:5%;
+  transition:all 0.5s ease;
+}
+
+div#frise div.element {
+  margin-top:3%;
+}
+
+div#frise div.element:nth-child(odd) .timeline-invisible {
+  transform:translate(-1000px);
+}
+div#frise div.element:nth-child(even) .timeline-invisible {
+  transform:translate(1000px);
+}
+
+div#frise div.element:nth-child(odd) .timeline-visible {
+  transform:translateX(0);
+}
+div#frise div.element:nth-child(even) .timeline-visible {
+  transform:translateX(0);
+}
+
+div#frise div.element:nth-child(even) {
+  margin-right:5%;
+  margin-left:55%;
+}
+div#frise div.element:nth-child(odd) .time {
+  text-align:right;
+}
+div#frise div.element:nth-child(odd) {
+  margin-left:5%;
+  margin-right:55%;
+}

@@ -1,0 +1,155 @@
+
+#projects {
+  background-color:var(--green);
+  padding-bottom:5%;
+  padding-top:5%;
+}
+
+
+.container-carousel {
+  background-color:none;
+  margin:0;
+  /*Mieux avec ça : ? margin: 2% 20%;*/
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+  
+  background-color:unset;
+  border:none;
+}
+.carousel-inner {
+    display: flex;
+    overflow: hidden;
+    height: 80vh;
+    flex-wrap: nowrap;
+  border-top-right-radius:5px;
+  border-top-left-radius:5px;
+  
+  background-color:#eeeeee;
+  margin:0 10%;
+}
+.slide {
+    flex: 0 0 100%;
+    /* Largeur de chaque diapositive est de 100% */
+    height: 100%;
+    /* Hauteur de chaque diapositive est de 100% */
+    transition: .5s ease-in-out;
+    /* Ajout d'une animation douce pour la transition entre les diapositives */
+}
+
+.slide h2 {
+  text-align:center;
+  margin-top:30px;
+  margin-bottom:30px;
+}
+
+.slide img {
+  margin:auto;
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+  display:block;
+  
+}
+.carousel-controls {
+  
+  opacity:0.8;
+    position: absolute;
+    z-index: 5;
+    left: 1%;
+    right:1%;
+    top:45%;
+    display: flex;
+    justify-content: space-between;
+  
+  
+}
+.carousel-controls button {
+    padding:50px;
+    background: none;
+    border-radius: 10px;
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+    transition: all 0.1s ease-out;
+}
+
+.carousel-controls button:hover {
+    transform: scale(1.1);
+}
+
+.carousel-controls button:nth-child(1) {
+    background-image: url("https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/leftarrowwhite.png?v=1709073388479");/*https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/leftarrow.png?v=1709073207857*/
+}
+.carousel-controls button:nth-child(2) {
+    background-image: url("https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/rightarrowwhite.png?v=1709073386042");/*https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/rightarrow.png?v=1709073209311*/
+}
+
+
+
+
+
+.carousel-dots {
+  /*
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    right: 50%;
+    bottom: 3.5%;
+  */
+    display: flex;
+    justify-content: center;
+  background-color:#eeeeee;
+  margin:0 10%;
+  padding:10px;
+  
+  border-bottom-right-radius:5px;
+  border-bottom-left-radius:5px;
+}
+.carousel-dots .dot {
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+.carousel-dots .active {
+  border:10px solid var(--dark-green);
+}
+.carousel-dots .inactive {
+  border:10px solid var(--green);
+}
+
+.container-carousel ul, .container-carousel ul li {
+  display:inline;
+}
+
+.container-carousel ul li svg {
+  width:7px;
+  margin-right:4px;
+}
+.container-carousel ul li.langage-python svg {
+  color:orange;
+}
+
+@media (max-width: 800px) {
+	.container-carousel {
+		margin:2% 0;
+	}
+  
+  .carousel-inner {
+    margin:0 1% !important; /* pk j'ai besoin de important ici... a corriger*/
+  }
+  
+  .carousel-dots {
+    margin:0 1%;
+  }
+  
+  .carousel {
+    border:none;
+  }
+  
+  .carousel-controls {
+    display:none;
+  }
+}

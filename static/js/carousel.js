@@ -1,14 +1,7 @@
-// Ceci est une fonction auto - exécutable.Les fonctions auto - exécutables
-// sont des fonctions qui s'exécutent immédiatement après leur déclaration,
-// sans avoir besoin d'être appelées.Les accolades immédiatement après la 
-// déclaration de la fonction et les parenthèses à la fin de la déclaration 
-// définissent la fonction et permettent de l'exécuter immédiatement.
+// fonction auto exécutable
 (function () {
-    // Utilisation de la directive "use strict" pour activer le mode strict en JavaScript
-    // Cela implique une meilleure gestion des erreurs et une syntaxe plus stricte pour le code
-    "use stict"
-    // Déclare la constante pour la durée de chaque slide
-    const slideTimeout = 5000;
+    "use strict"
+    //const slideTimeout = 5000;
     // Récupère les boutons de navigation
     const prev = document.querySelector('#prev');
     const next = document.querySelector('#next');
@@ -36,7 +29,8 @@
     }
     // Boucle pour créer les "dots" en fonction du nombre de slides
     for (let i = 1; i <= $slides.length; i++) {
-        let dotClass = i == currentSlide ? 'active' : 'inactive';
+        // fix avec le +1
+        let dotClass = i == currentSlide+1 ? 'active' : 'inactive';
         let $dot = `<span data-slidId="${i}" class="dot ${dotClass}"></span>`;
         document.querySelector('.carousel-dots').innerHTML += $dot;
     }
@@ -48,7 +42,6 @@
     prev.addEventListener('click', () => slideTo(--currentSlide))
     // Ajout d'un écouteur d'événement "click" sur le bouton "next" pour afficher le slide suivant
     next.addEventListener('click', () => slideTo(++currentSlide))
-    // Initialisation de l'intervalle pour afficher les slides
     //intervalId = setInterval(showSlide, slideTimeout)
     // Boucle sur tous les éléments de type "slide" pour ajouter des écouteurs d'événement pour les interactions avec la souris et le toucher
     $slides.forEach($elt => {

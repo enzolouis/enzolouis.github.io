@@ -1,30 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;700&display=swap');
+
+
 /* use */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@800&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
 
-
+@import 'me.css';
+@import 'mytimeline.css';
+@import 'myprojects.css';
+@import 'myprofile.css';
+@import 'welcome.css';
 @import 'header.css';
 @import 'footer.css';
 
-/*
-https://www.youtube.com/watch?v=9-GXlvohlvA&list=WL&index=18
-*/
 
 :root {
-	--main-color: #353b48;
-	--main-background-color:  #f0f0f0; /* #dcdde1; */
-  --camel:#fde7e1;
-  --red:#ecab9e;
-  --black:#52505e;
+  /* --black:#52505e; */  
+  
+  --white:#ffffff;
+  --grey:#f0f0f0;
+  --very-dark-green:#001f3f;
+  --dark-green:#003f5c;
+  --green:#0077b6;
+  
+  --green-rgba:rgba(0,119,182, 0.5);
 }
 
+/* 
+--very-dark-green:#072d1f;
+  --dark-green:#0c4b33;
+  --green:#187f58;
+  
+  --green-rgba:rgba(24,127,88, 0.5);
+}
+*/
 
-* {box-sizing: border-box; font-weight:300;}
+
+* {box-sizing: border-box; font-weight:300;scroll-behavior: smooth;}
 a {text-decoration: none;}
 ul, ol, li {list-style-type: none;}
 button {border: none;}
-main {padding: 0; /* color: #0C4B33; #44B78B */}
 html {height: 100%}
 
 a:visited {
@@ -35,11 +56,8 @@ body {
 	margin: 0;
 	padding: 0;
 
-	font-family: 'Fredoka', sans-serif; /* SITE DJANGO.COM */
+	font-family: "Fredoka", sans-serif; /* SITE DJANGO.COM */
 	font-weight: 300;
-	/* GOOGLE FONT : font-family: 'Montserrat', sans-serif; */
-
-	background-color:var(--main-background-color);
   
 
 	/* MISE EN PLACE DU DISPLAY FLEX POUR COLLER LE FOOTER EN BAS DE PAGE QUAND LA PAGE EST COURTE */
@@ -49,180 +67,528 @@ body {
 	/* --- */
 }
 
-@media (max-width: 800px) {
-	body {
-		/* font-size:50%; */
+main {
+  padding:0;
+  margin:0;
+  background:var(--dark-green);
+}
+
+/* big title */
+
+.content-title {
+	text-align:center;
+	padding-top: 10%;
+	padding-bottom: 10%;
+  
+  color:white;
+  font-weight:600;
+  font-size:60px;
+  letter-spacing:2px;
+  
+  font-family: "Permanent Marker", cursive;
+}
+
+
+/* SEPARATORS */
+.separator {
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+
+.separator::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background:none;
+  clip-path: polygon(100% 0, 0 0, 0 100%);
+}
+
+.separator::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+.separator.reverse {
+  transform: rotateY(180deg);
+}
+
+.vertical .separator.reverse {
+  transform: rotateX(180deg);
+}
+
+
+.sep1, .sep2, .sep3, .sep4 {
+  height:300px;
+}
+
+.sep1::before {
+  background:none;
+}
+
+.sep1::after {
+  background-color:var(--grey);
+}
+
+.sep2::before {
+  background-color: var(--grey);
+}
+
+.sep2::after {
+  background-color: var(--green);
+}
+
+.sep3::before {
+  background-color:var(--green);
+}
+
+.sep3::after {
+  background-color:var(--very-dark-green);
+}
+
+.sep4::before {
+  background-color:var(--very-dark-green);
+}
+
+.sep4::after {
+  background-color:var(--white);
+}
+
+
+/* - */
+
+/* top button */
+
+#top_button {
+	position:fixed;
+	bottom:15px;
+	right:25px;
+	z-index:99;
+	opacity: 0.4;
+	border:none;
+	outline:none;
+	background-color:var(--green);
+	color:white;
+	cursor:pointer;
+	width:70px;
+	height:70px;
+	border-radius:50%;
+	font-size:30px;
+  text-align:center;
+}
+
+#top_button:hover {
+	transition:.1s linear;
+	opacity:1;
+}
+
+
+/* LOADER */
+.loader-container {
+	z-index: 1000000000;
+	position: fixed;
+	width: 100%;
+	opacity: 1;
+	background: var(--dark-green);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    transition: all 1s ease-in-out; /* Ajoute une transition de fondu */
+  }
+
+.loader-container img {
+	animation: up 2s forwards;
+}
+
+@keyframes up {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	50% {
+		transform: rotate(360deg);
+	}
+
+	100% {
+		transform: scale(20);
 	}
 }
 
-@media (min-width: 810px) {
-	
+body {
+}
+
+.loader-container.loaded {
+	opacity: 0;
+}
+main, header, footer {
+    transition: all 1s ease-in-out;
+}
+
+main.loaded, header.loaded, footer.loaded {
+  overflow:normal;
+}
+
+body.loaded {
+  overflow:auto;
 }
 
 
 
+/* ancien trucs */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-div.main-title-flex {
-	border-bottom: 1px solid #d8d8d8;
+/*
+div.welcome-image {
+	/*background-image: url("https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/%E2%80%94Pngtree%E2%80%94pink%20playful%20abstract%20portfolio%20memphis_1347369.png?v=1696022296367");
+	background-size: cover;*/
+	/*background-repeat: no-repeat;*/
+	/*background-position: left;*/
+	/*background-attachment: fixed;*/
+  /*
+	height: 100%;
+  
+  margin:0 !important;
+  background:var(--dark-green);
 }
-
-div.main-title-flex h1 {
-	text-align: center;
-}
-
-/* NON UTILISE POUR L'INSTANT */
+*/
 
 
-div.main-title-flex div.searchbar {
-	background-color: white;
+/* XXXXXXXXXXXXXXXXXXXXX boxes plus utilisé XXXXXXXXXXXXXXXXXXXXXXXX */
+/*
+.body .boxes {
+	margin: 0 20%;
 	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
 }
 
-div.main-title-flex div.searchbar input {
-	flex: 2;
+.body .boxes .box {
 	background-color: white;
-	border: none;
-	padding: 1%;
-	font-size: 17px;
-	color: #0097e6;
-	font-weight: bold;
-	padding-left: 5%;
+	flex: 1 0 40%;
+	margin: 2%;
+	width: 100px;
+	height: 100%;
+	padding:0;
+	
+
+	border-radius: 10px;
+
+	-webkit-box-shadow: 18px 14px 15px -10px #000000; 
+  box-shadow: 18px 14px 15px -10px #000000;
 }
 
-div.main-title-flex div.searchbar input:focus {
-	outline: none;
+.body .boxes .box:hover {
+  transition:all 0.2s ease;
+  transform:scale(1.01);
 }
 
-div.main-title-flex div.searchbar button {
-	flex: 0;
-	background-color: white;
-	cursor: pointer;
-	padding: 1%;
-	padding-right: 5%;
+.body .boxes .box:nth-child(2n-1) {
+  border-left:10px solid #00CEC9;
 }
 
-div.main-title-flex div.searchbar button svg {
-	color: #0097e6;
-	transform: scale(1);
+.body .boxes .box:nth-child(2n) {
+  border-left:10px solid #44B78B;
 }
 
-
-div.main-title-flex div.searchbar:hover > input {
-	transition: padding 0.2s;
-	padding-left: 15%;
+.body .boxes .box:nth-child(3n) {
+  border-left:10px solid #0097E6;
 }
 
-div.main-title-flex div.searchbar:hover > button {
-	transition: padding 0.2s;
-	padding-right: 15%;
+.body .boxes .box h2 {
+  text-align:center;
+  font-size:25px;
 }
 
-div.main-title-flex div.searchbar:hover > button > svg {
-	transition: transform 0.2s 0.2s, color 0.2s 0.2s;
-	transform: scale(1.9);
-	color: red;
+.body .boxes .box p {
+  text-align:center;
+  font-size:17px;
 }
 
-
-
-
-/* POURQUOI ON NE MET PAS JUSTE FLOAT: LEFT; ET FLOAT: RIGHT; -> https://learn.shayhowe.com/html-css/positioning-content/ */
-section {
-	float: right;
-	margin: 0; /* juste 0 ? */
-  	width:80%;
-  	padding-left: 3%;
-}
-
-aside {
-	/* float: left;  APPAREMENT PAS BESOIN DE LE METTRE */ 
-	margin: 0 1.5%;  /* juste 0 ? */
-	width: 20%;
-	margin: 0;
-	background-color: #f0f0f0;
+.body .boxes .box ul {
+  font-size:17px;
+  margin:10px;
+  padding:0;
+  text-align:left;
 }
 
 
 
-
-aside nav ul.outside {
-	padding: 0;
-	margin: 0;
-	border-right: 2px solid #d8d8d8;
-	height: 50%;
+.body .boxes .box ul li {
+  margin:0;
+  display:inline-block;
+  margin-right:10px;
 }
 
-aside nav ul.outside li.outside {
-	border-top: 5px solid #d8d8d8;
-	padding: 0;
+.body .boxes .box ul li svg {
+  width:7px;
+  margin-right:4px;
+}
+.body .boxes .box ul li.langage-python svg {
+  color:orange;
 }
 
-aside nav ul.outside li.outside a {
-	/* POUVOIR CLIQUER SUR TOUTES LA CASE (li) */
-	display: block;
-	width: 100%;
-	/* --- */
-	color: black;
+.body .boxes .box img {
+  width:100%;
+  height:100%;
 }
 
-aside nav ul.outside li.outside > a {
-	padding: 3%;
-	text-align: center;
+.image-scroll {
+  transition: transform 2s .25s cubic-bezier(0,1,.3,1),
+              opacity 2s .25s ease-out;
 }
 
-
-aside nav ul.outside li.outside ul.inside {
-	border-top: 1px solid #d8d8d8; /*#cccccc*/
-	border-left: 1px solid #d8d8d8;
-	padding: 0;
-}
-
-aside nav ul.outside li.outside ul.inside li.inside {
-	list-style-type: none; /* square */
-	border-bottom: 1px solid #d8d8d8;
-}
-
-aside nav ul.outside li.outside ul.inside li.inside svg {
-	margin-right: 5px;
-}
-
-aside nav ul.outside li.outside ul.inside li.inside a {
-	font-weight: 500;
-	padding: 2%;
-}
-
-aside nav ul.outside li.outside ul.inside li.inside a:hover {
-	background-color: rgba(128, 128, 128, 0.2);
+.image-scroll-visible {
+  opacity:1;
 }
 
 
-
-
-
-
-
-main div.section-container section {
-	background-color: #ffffff; /* f5f6fa */
-	font-family: 'Lora', serif;
-	font-weight: 400;
+.image-scroll-invisible {
+  opacity:0;
 }
+
+<!--
+      <div class="boxes">
+        <div class="box image-scroll image-scroll-invisible">
+          <h2>Simulateur de 3d avec PyGame</h2>
+          <img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/pseudo3d.PNG?v=1696096812367">
+          <p>Description Image</p>
+          <ul class="langages">
+            <li class="langage-python"><i class="fa-solid fa-circle"></i> Python</li>
+          </ul>
+        </div>
+
+        <div class="box image-scroll image-scroll-invisible" id="proj-horloge">
+          <h2>Horloge avec QT</h2>
+          <img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/timeout.PNG?v=1696103378070">
+          <p>Description Image</p>
+          <ul class="langages">
+            <li class="langage-python"><i class="fa-solid fa-circle"></i> Python</li>
+          </ul>
+        </div>
+
+        <div class="box image-scroll image-scroll-invisible" id="proj-codeeditor">
+          <h2>Editeur de code basique avec QT</h2>
+          <img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/quickcode.PNG?v=1696105055505">
+          <p>Editeur de code basique</p>
+          <ul class="langages">
+            <li class="langage-python"><i class="fa-solid fa-circle"></i> Python</li>
+          </ul>
+        </div>
+
+        <div class="box image-scroll image-scroll-invisible">
+          <h2>Remix de pastebin.com</h2>
+          <img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/asfix_pasterbin.PNG?v=1696935945888">
+          <p>Editeur de code basique</p>
+          <ul class="langages">
+            <li class="langage-python"><i class="fa-solid fa-circle"></i> Python</li>
+            <li class="langage-html"><i class="fa-solid fa-circle"></i> HTML</li>
+            <li class="langage-css"><i class="fa-solid fa-circle"></i> CSS</li>
+            <li class="langage-js"><i class="fa-solid fa-circle"></i> JS</li>
+            <li class="langage-python-django"><i class="fa-solid fa-circle"></i> Django Framework</li>
+          </ul>
+        </div>
+
+        <div class="box image-scroll image-scroll-invisible">
+          <h2>Calculatrice avec Parser/Lexer</h2>
+          <img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/calculatrice.PNG?v=1696935683683">
+          <p>Description Image</p>
+          <ul class="langages">
+            <li class="langage-python"><i class="fa-solid fa-circle"></i> Python</li>
+          </ul>
+        </div>
+
+
+
+        <div class="box image-scroll image-scroll-invisible" id="proj-metronome">
+          <h2>Métronome avec QT, en Python</h2>
+          <img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/metronome.png?v=1696096562328">
+          <p>Description Image</p>
+          <ul class="langages">
+            <li class="langage-python"><i class="fa-solid fa-circle"></i> Python</li>
+          </ul>
+        </div>
+
+        <div class="box image-scroll image-scroll-invisible" id="proj-chatapp">
+          <h2>Application de chat en LAN</h2>
+          <img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/quickcode.PNG?v=1696105055505">
+          <p>Description</p>
+          <ul class="langages">
+            <li class="langage-python"><i class="fa-solid fa-circle"></i> Python</li>
+          </ul>
+        </div>
+
+      </div>-->
+
+*/
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+
+/*
+.body3 {
+  background-color:rgba(240, 240, 240, 0.3);
+  padding-bottom:15%;
+}
+
+.body3 .content-title, .body3 .two-sides div {
+  background:rgba(0, 0, 0, 0.3);
+  color:white;
+}
+
+<!--
+    <div class="body2 body3">
+      <div class="content-title">
+        Mon profil
+      </div>
+
+      <div class="two-sides">
+        <div>
+          Je suis dans le développement informatique depuis à peu près 5 ans.
+          J'ai découvert Python lors de mes début lorsque j'étais au lycée, puis HTML et CSS.
+          Ensuite, arrivé à l'IUT Informatique de Toulouse (<a href="https://www.univ-tlse3.fr/">Université III Paul Sabatier</a>),
+          j'ai découvert davantages de langages, technologies, ...
+        </div>
+
+        <div>
+          Actuellement étudiant en 2ème année de BUT Informatique, je souhaite accomplir un Master.<br><br>
+          Je n'ai toujours pas de réelle expériences professionnelles, à part un stage en 2019, où j'ai pu découvrir le SQL
+          principalement
+        </div>
+      </div>
+    </div>
+-->
+
+
+TIMELINE :
+
+<div id="frise">
+
+
+        <div class="element">
+          <div class="inside">
+            <div class="content">
+              <p class="time year">2019</p>
+              <p class="time">Mai</p>
+              <h2><i class="fa-solid fa-brain"></i>Apprentisage avancé du langage Python</h2>
+              <p class="descr">Début d'apprentissage en 2019 poursuivi en 2020</p>
+            </div>
+          </div>
+        </div>
+        <div class="element">
+          <div class="inside">
+            <div class="content">
+              <p class="time year">2020</p>
+              <p class="time">Janvier</p>
+              <h2><i class="fa-solid fa-brain"></i>Apprentissage avancé de HTML-CSS</h2>
+              <p class="descr">Texte texte texte</p>
+            </div>
+          </div>
+        </div>
+        <div class="element">
+          <div class="inside">
+            <div class="content">
+              <p class="time">Avril</p>
+              <h2><i class="fa-solid fa-brain"></i>Apprentissage des bases de C#</h2>
+              <p class="descr">Texte texte texte</p>
+            </div>
+          </div>
+        </div>
+        <div class="element">
+          <div class="inside">
+            <div class="content">
+              <p class="time">Juillet</p>
+              <h2><i class="fa-solid fa-brain"></i>Apprentissage de la framework Django</h2>
+              <p class="descr">Texte texte texte</p>
+            </div>
+          </div>
+        </div>
+        <div class="element">
+          <div class="inside">
+            <div class="content">
+              <p class="time">Août</p>
+              <h2><i class="fa-solid fa-brain"></i>Apprentissage des bases du JavaScript</h2>
+              <p>Texte texte texte</p>
+              <h2><i class="fa-solid fa-diagram-project"></i>Projet de chat app avec Socket</h2>
+              <p class="descr">Texte texte texte <a href="#proj-chatapp">click</a></p>
+             <!--<img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/quickcode.PNG?v=1696105055505">-->
+            </div>
+          </div>
+        </div>
+        <div class="element">
+          <div class="inside">
+            <div class="content">
+              <p class="time year">2021</p>
+              <p class="time">Janvier</p>
+              <h2><i class="fa-solid fa-diagram-project"></i>Projets d'editeur de code</h2>
+              <p class="descr">Texte texte texte <a href="#proj-codeeditor">click</a></p>
+              <!--<img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/quickcode.PNG?v=1696105055505">-->
+            </div>
+          </div>
+        </div>
+        <div class="element">
+          <div class="inside">
+            <div class="content">
+              <p class="time">Juillet</p>
+              <h2><i class="fa-solid fa-diagram-project"></i>Projets d'application d'Horloge comprenant chronomètre, minuteur, heure</h2>
+              <p class="descr">Texte texte texte <a href="#proj-horloge">click</a></p>
+              <!--<img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/timeout.PNG?v=1696103378070">-->
+            </div>
+          </div>
+        </div>
+        <div class="element">
+          <div class="inside">
+            <div class="content">
+              <p class="time year">2022</p>
+              <p class="time">Janvier</p>
+              <h2><i class="fa-solid fa-diagram-project"></i>Projet Métronome</h2>
+              <p class="descr">Texte texte texte<a href="#proj-metronome">click</a></p>
+              <!--<img src="https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/metronome.png?v=1696096562328">-->
+            </div>
+          </div>
+        </div>
+        <div class="element">
+          <div class="inside">
+            <div class="content">
+              <p class="time">Septembre</p>
+              <h2><i class="fa-solid fa-brain"></i>Apprentissage de SQL</h2>
+              <p class="descr">Texte texte texte</p>
+              <h2><i class="fa-solid fa-brain"></i>Apprentissage des bases du ADA</h2>
+              <p class="descr">Texte texte texte</p>
+            </div>
+          </div>
+        </div>
+        <div class="element">
+          <div class="inside">
+            <div class="content">
+              <p class="time">Octobre</p>
+              <h2><i class="fa-solid fa-brain"></i>Apprentissage des bases du Langage Shell</h2>
+              <p class="descr">Texte texte texte</p>
+            </div>
+          </div>
+        </div>
+        <div class="element">
+          <div class="inside">
+            <div class="content">
+              <p class="time year">2023</p>
+              <p class="time">Janvier</p>
+              <h2><i class="fa-solid fa-brain"></i>Apprentissage des bases du Langage C</h2>
+              <p class="descr">Texte texte texte</p>
+            </div>
+          </div>
+        </div>
+        <div class="element">
+          <div class="inside">
+            <div class="content">
+              <p class="time">Février</p>
+              <h2><i class="fa-solid fa-brain"></i>Apprentissage du Java</h2>
+              <p class="descr">Texte texte texte</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+*/
