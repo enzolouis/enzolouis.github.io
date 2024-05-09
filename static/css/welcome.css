@@ -17,27 +17,16 @@
 }
 
 #welcome div {
-  /*font-family: "Shadows Into Light", cursive !important;*/
   font-family: "Permanent Marker", cursive;
   width:90%;
 }
 #welcome #welcome-title {
-  /*font-family: "Kode Mono", sans-serif;*/
   font-weight:bold;
   font-size:90px;
 }
 #welcome #welcome-sentence {
   font-size:30px;
 }
-/*
-#welcome::before {
-  content: "";position: absolute;left: 50%;top:15%;width: 10px;height: 5%;background: white;
-}
-#welcome::after {
-  content: "";position: absolute;left: 50%;bottom:15%;width: 10px;height: 5%;background: white;
-}
-*/
-
 
 
 #greenboard-star {
@@ -85,10 +74,6 @@
 
 
 
-
-
-
-
 @media (max-width: 800px) {
   #projects .content-title {
       margin:0 0px;
@@ -131,8 +116,3 @@
     font-size:15px;
   }
 }
-
-
-
-
-

@@ -81,10 +81,10 @@
 }
 
 .carousel-controls button:nth-child(1) {
-    background-image: url("https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/leftarrowwhite.png?v=1709073388479");/*https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/leftarrow.png?v=1709073207857*/
+    background-image: url("../images/leftarrowwhite.png");/*https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/leftarrow.png?v=1709073207857*/
 }
 .carousel-controls button:nth-child(2) {
-    background-image: url("https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/rightarrowwhite.png?v=1709073386042");/*https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/rightarrow.png?v=1709073209311*/
+    background-image: url("../images/rightarrowwhite.png");/*https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/rightarrow.png?v=1709073209311*/
 }
 
 

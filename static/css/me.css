@@ -105,74 +105,33 @@ div#me p {
   width:100%;
 }
 
-.me-popup#python::after {
-  content:"Python";
-}
+.me-popup#python::after {content:"Python"}
+.me-popup#java::after {content:"Java"}
+.me-popup#ada::after {content:"Ada"}
+.me-popup#php::after {content:"Php"}
+.me-popup#typescript::after {content:"Type Script"}
 
-.me-popup#java::after {
-  content:"Java";
-}
-
-.me-popup#ada::after {
-  content:"Ada";
-}
-
-.me-popup#php::after {
-  content:"Php";
-}
-
-.me-popup#javascript::after {
-  content:"Java Script";
-}
-
-.me-popup#html::after {
-  content:"HTML";
-}
-
-.me-popup#css::after {
-  content:"CSS";
-}
-
-.me-popup#ajax::after {
-  content:"Ajax";
-}
-
-.me-popup#django::after {
-  content:"Django (Avec Python)";
-}
-
-.me-popup#flask::after {
-  content:"Flask (Avec Python)";
-}
-
-.me-popup#php2::after {
-  content:"Php";
-}
-.me-popup#apirest::after {
-  content:"API Rest";
-}
+.me-popup#javascript::after {content:"Java Script"}
+.me-popup#html::after {content:"HTML"}
+.me-popup#css::after {content:"CSS"}
+.me-popup#ajax::after {content:"Ajax"}
 
 
-.me-popup#qt::after {
-  content:"Qt (Avec Python)";
-}
+.me-popup#nodejs::after {content:"Node.js"}
+.me-popup#adonisjs::after {content:"AdonisJS"}
+.me-popup#django::after {content:"Django (Avec Python)"}
+.me-popup#flask::after {content:"Flask (Avec Python)"}
+.me-popup#php2::after {content:"Php"}
+.me-popup#apirest::after {content:"API Rest"}
+.me-popup#prismaorm::after {content:"ORM Prisma"}
 
-.me-popup#jswing::after {
-  content:"Java Swing";
-}
 
-.me-popup#sql::after {
-  content:"SQL";
-}
+.me-popup#qt-python::after {content:"Qt (Python)"}
+.me-popup#qt-cpp::after {content:"Qt (C++)"}
+.me-popup#jswing::after {content:"Java Swing"}
 
-.me-popup#mysql::after {
-  content:"MySql (SGBD)";
-}
-
-.me-popup#sqlite::after {
-  content:"Sqlite (SGBD)";
-}
-
-.me-popup#oracle::after {
-  content:"Oracle (SGBD)";
-}
+.me-popup#sql::after {content:"SQL"}
+.me-popup#mysql::after {content:"MySql (SGBD)"}
+.me-popup#sqlite::after {content:"Sqlite (SGBD)"}
+.me-popup#oracle::after {content:"Oracle (SGBD)"}
+.me-popup#derby::after {content:"Java Derby (SGBD)"}
