@@ -115,7 +115,7 @@ div#me p {
 .me-popup#html::after {content:"HTML"}
 .me-popup#css::after {content:"CSS"}
 .me-popup#ajax::after {content:"Ajax"}
-
+.me-popup#bootstrap::after {content:"Bootstrap"}
 
 .me-popup#nodejs::after {content:"Node.js"}
 .me-popup#adonisjs::after {content:"AdonisJS"}

@@ -14,12 +14,15 @@
   font-size:25px;
   text-align:center;
 
+  height: 120vh;
+  overflow: hidden;
 }
 
-#welcome div {
+#welcome .welcome-content {
   font-family: "Permanent Marker", cursive;
-  width:90%;
+  margin-bottom: 20vh; /* undo the 120vh height to 100vh (center) */
 }
+
 #welcome #welcome-title {
   font-weight:bold;
   font-size:90px;
@@ -28,51 +31,141 @@
   font-size:30px;
 }
 
-
-#greenboard-star {
-  width:100px;
-  position:absolute;
-  top:15%;
-  left:2%;
-  
-  animation:turn-right-infinite 3s linear infinite;
+#welcome #welcome-details {
+  font-size: 16px;
 }
 
-@keyframes turn-right-infinite {
-  from {
-    transform:rotate(0deg);
-  }
-  
-  to {
-    transform:rotate(360deg);
-  }
-}
-
-#greenboard-stars {
-  width:100vw;
-  max-width: 100%; /* solute to width:100vh creating a horizontal sidebar */
+#welcome-background {
+  /*width:100vw;
+  max-width: 100%;*/ /* solute to width:100vh creating a horizontal sidebar */
   position:absolute;
   left:0;
   opacity:0.1;
-  /*
-  animation:clint 10s linear infinite;*/
+
+  display: block; /* Supprime les espaces blancs causés par les images en ligne */
+  width: 100%; /* Assure que l'image occupe toute la largeur */
+  height: 150vh; /* Fait correspondre la hauteur de l'image à celle de la fenêtre */
+  object-fit: cover; /* Recadre l'image pour couvrir tout l'espace */
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 400px; /* wave's height */
+  background: var(--grey);
+  clip-path: path("M0,350 C500,550 800,100 1100,400 C1500,550 1900,150 2300,400 C2700,600 3100,200 3600,350 L3600,600 L0,600 Z");
+}
+
+.wave-second {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  height: 450px; /* seconde wave's height */
+  background: var(--grey);
+  clip-path: path("M0,400 C600,500 1000,50 1400,350 C1700,500 2200,100 2600,350 C2900,500 3400,50 3800,400 L3800,600 L0,600 Z");
+}
+
+/*
+.countdown-licence {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background:#0077b6;
+  color: white;
+  padding:3px 5px;
+  border-radius:3px;
+  animation:clint 1s linear infinite;
+}
+
+.countdown-licence::after {
+  font-size: 8px;
+}
+
+#countdown-licence-month::after {
+  content: "mois";
+}
+
+#countdown-licence-day::after {
+  content: "jours";
+}
+
+#countdown-licence-hour::after {
+  content: "heures";
+}
+
+#countdown-licence-minute::after {
+  content: "minutes";
+}
+
+#countdown-licence-second::after {
+  content: "secondes";
 }
 
 @keyframes clint {
   0% {
-    opacity:0.5;
+    transform: scale(1.05);
   }
   
   50% {
-    opacity:0;
+    transform: scale(1);
   }
   
   100% {
-    opacity:0.5;
+    transform: scale(1.05);
   }
 }
 
+.list-diploma {
+  position:absolute;
+  right:0;
+  top:80px;
+  display:flex;
+  flex-flow:column wrap;
+  gap:5px;
+}
 
+.list-diploma div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding:10px;
+  background:var(--green);
+  color: var(--white);
+}
+
+.list-diploma svg {
+  font-size: 23px;
+}
+
+.list-diploma #current-diploma {
+  background:var(--white);
+  color: var(--green);
+}
+
+.list-diploma #current-diploma svg {
+  display: inline-flex;
+  animation:turn 1s linear infinite;
+}
+
+.list-diploma #future-diploma {
+  background:var(--grey);
+  color:var(--green);
+}
+
+*/
+
+@keyframes turn {
+  from {
+    transform: rotate(0);
+  }
+  
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 @media (max-width: 800px) {
   #projects .content-title {
