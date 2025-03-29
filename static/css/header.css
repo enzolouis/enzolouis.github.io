@@ -44,6 +44,7 @@ nav#nav ul li > a::before {
     width: 100%;
     height: 0px;
     background: var(--white);
+    /*z-index: -10; for <a> HTML content to be shown */
 }
 
 
@@ -61,10 +62,17 @@ nav#nav ul li:hover > a::before, nav#nav ul li#currentPage:hover > a::before {
   transition:all 0.2s ease;
   height:100%;
   font-size:40px;
-  content:"⬇️";
+  content:'\2193';
+}
+/*
+* {
+  cursor: url(cursor.png) 4 12, pointer;
 }
 
-
+a, button {
+  cursor: url(cursor_reverse.png) 4 12, pointer;
+}
+*/
 
 nav#nav ul li:hover > a {
   color:var(--green);

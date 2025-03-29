@@ -31,10 +31,6 @@
   font-size:30px;
 }
 
-#welcome #welcome-details {
-  font-size: 16px;
-}
-
 #welcome-background {
   /*width:100vw;
   max-width: 100%;*/ /* solute to width:100vh creating a horizontal sidebar */
@@ -68,7 +64,7 @@
   clip-path: path("M0,400 C600,500 1000,50 1400,350 C1700,500 2200,100 2600,350 C2900,500 3400,50 3800,400 L3800,600 L0,600 Z");
 }
 
-/*
+
 .countdown-licence {
   display: inline-flex;
   flex-direction: column;
@@ -118,54 +114,26 @@
   }
 }
 
-.list-diploma {
-  position:absolute;
-  right:0;
-  top:80px;
-  display:flex;
-  flex-flow:column wrap;
-  gap:5px;
-}
-
-.list-diploma div {
+.dut {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   padding:10px;
-  background:var(--green);
-  color: var(--white);
+  background:var(--white);
+  color: var(--green);
+  font-weight: bold !important;
+  text-align: center;
+  font-size:13px;
 }
 
-.list-diploma svg {
+.dut svg {
   font-size: 23px;
 }
 
-.list-diploma #current-diploma {
-  background:var(--white);
-  color: var(--green);
-}
 
-.list-diploma #current-diploma svg {
-  display: inline-flex;
-  animation:turn 1s linear infinite;
-}
 
-.list-diploma #future-diploma {
-  background:var(--grey);
-  color:var(--green);
-}
 
-*/
 
-@keyframes turn {
-  from {
-    transform: rotate(0);
-  }
-  
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 @media (max-width: 800px) {
   #projects .content-title {

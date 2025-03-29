@@ -63,11 +63,19 @@ function loop() {
   /* LE PREMIER FAIT QUE LES 3 SACTIVE (a reparer) */
   /* c logique sur pc mais sur tel ils seront séparés en 3 verticalement donc seront pas sur la viewport au meme moment */
   if (isElementInViewport(document.getElementsByClassName("zoom-container-div")[0])) {
-    
     Array.from(document.getElementsByClassName("zoom-div")).forEach(function (e) {
       e.style.transform = "scale(0.8)";
-    })
+    })    
   }
+
+  
+  /*if (isElementInViewport(document.getElementsByClassName("two-sides")[0])) {
+    Array.from(document.getElementsByClassName("profile-side")).forEach(function (e) {
+      e.style.opacity = "1";
+      e.style.opacity = "1";
+    })
+      
+  }*/
   
   
   if (isElementInViewport2(document.getElementById("frise"))) {    

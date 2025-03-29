@@ -52,40 +52,14 @@
     <button onclick="topFunction()" id="top_button" title="Go to top">
       <i class="fa-solid fa-arrow-up"></i>
     </button>
-    <!--
-    <div class="list-diploma">
-        <div style="border-top-left-radius: 5px;">
-            <span><i class="fa-solid fa-award"></i></span>
-            <span>Baccalauréat mention très bien, Lycée Albert Claveille <img width="50" src="https://iut.univ-tlse3.fr/uas/iut/LOGO/Logo_IUT_ACT_couleurs.png"></span>
-        </div>
-        <div>
-            <span><i class="fa-solid fa-award"></i></span>
-            <span>DUT Informatique mention bien, Université Toulouse III Paul Sabatier</span>
-        </div>
-        <div id="current-diploma">
-            <span><i class="fa-solid fa-spinner"></i></span>
-            <span>Licence Informatique, Université Toulouse III Paul Sabatier</span><br>
-            <span id="countdown-licence-month" class="countdown-licence"></span>
-            <span id="countdown-licence-day" class="countdown-licence"></span>
-            <span id="countdown-licence-hour" class="countdown-licence"></span>
-            <span id="countdown-licence-minute" class="countdown-licence"></span>
-            <span id="countdown-licence-second" class="countdown-licence">17</span>
-        </div>
-        <div id="future-diploma" style="border-bottom-left-radius: 5px;">
-            <span><i class="fa-solid fa-circle-xmark"></i></span>
-            <span>Master Informatique</span>
-        </div>
-      </div>
-    -->
     
     <section id="welcome">
-      <img id="welcome-background" src="background.png">
+      <img id="welcome-background" src="static/images/background.png">
       
       <div class="welcome-content">
         <div>
           <span id="welcome-title">Enzo LOUIS</span><br>
           <span id="welcome-sentence">Un développeur junior situé à Toulouse</span><br>
-          <span id="welcome-details">Licence 3, titulaire d'un DUT Informatique, 2 mois d'expériences professionnelles</span>
         </div>
       </div>
 
@@ -236,7 +210,7 @@
           </div>
         </div>
         <p>
-          
+          Et des bases en NoSql (mongoDB)
         </p>
       </div>
     </div>
@@ -251,48 +225,155 @@
           <div class="carousel">
               <div class="carousel-inner">
                 <div class="slide">
-                  <h2><span style="font-family:'Permanent Marker', cursive">Embin</span> : Site de partage de code (Remix de pastebin.com) (<a href="https://github.com/enzolouis/embin">github</a>)</h2>
+                  <h2><span style="font-family:'Permanent Marker', cursive">Embin</span> : Site de partage de code (Pastebin) (<a href="https://embin.onrender.com/">lien</a>) (<a href="https://github.com/enzolouis/embin">github</a>)</h2>
+                  <ul>
+                    <li>Projet personnel</li>
+                    <li>Déploiement développement/production</li>
+                  </ul>
                   <img src="static/images/myprojects/embin.png" alt="Embin image">
                 </div>
                 <div class="slide">
                   <h2><span style="font-family:'Permanent Marker', cursive">Proxichat</span> : Chat en réseau LAN (<a href="https://github.com/enzolouis/pyqt-socket-chat">github</a>)</h2>
+                  <ul>
+                    <li>Projet personnel</li>
+                    <li>Socket</li>
+                    <li>Parrallélisme</li>
+                    <li>Qt</li>
+                  </ul>
                   <img src="static/images/myprojects/proxichat.png" alt="Image 3">
                 </div>
                 <div class="slide">
                   <h2>Réseau social avec PHP et MySQL (<a href="https://github.com/enzolouis/social-network-web">github</a>)</h2>
-                  <img src="static/images/myprojects/socialnetworkweb.png" alt="Image 3">
+                  <ul>
+                    <li>Projet personnel</li>
+                    <li>Websocket</li>
+                    <li>Collaboration</li>
+                    <li>Système de compte</li>
+                    <li>Système de temps réel</li>
+                    <li>Système de cache</li>
+                  </ul>
+                  <img src="static/images/myprojects/socialnetworkweb.png" alt="Image de Réseau social avec PHP et MySQL">
                 </div>
                 <div class="slide">
-                  <h2>Métronome en C++ avec QT (<a href="https://github.com/enzolouis/cpp-qt-metronome-app">github</a>)</h2>
-                  <img src="static/images/myprojects/metronome.png" alt="Image 1">
+                  <h2>Participation au projet "Crackito" de <a href="https://www.linkedin.com/in/jln-brtn/">Julien Breton</a> en 2024, lors d'un stage à l'IRIT à Toulouse</h2>
+                  <ul>
+                    <li>Projet professionnel</li>
+                    <li>Full-stack</li>
+                    <li>Maintenance et migrations</li>
+                    <li>Hébergement serveur</li>
+                    <li>Versionnage</li>
+                    <li>Bootstrap</li>
+                    <li>Architecture NodeJS</li>
+                  </ul>
+                  <img src="static/images/myprojects/crackito.png" alt="Image de Réseau social avec PHP et MySQL">
                 </div>
                 <div class="slide">
-                  <h2>Site de gestion d'un cabinet médical avec API (<a href="https://github.com/enzolouis/doctors-office-website">github</a>)</h2>
-                  <img src="static/images/myprojects/doctorsoffice.png" alt="Image 5">
+                  <h2>Métronome en C++ avec Qt (<a href="https://github.com/enzolouis/cpp-qt-metronome-app">github</a>)</h2>
+                  <ul>
+                    <li>QT</li>
+                  </ul>
+                  <img src="static/images/myprojects/metronome.png" alt="Image de Métronome en C++ avec Qt">
+                </div>
+                <div class="slide">
+                  <h2>Site de gestion d'un cabinet médical avec API (<a href="https://github.com/enzolouis/doctors-office-website">github de l'app</a>, <a href="https://github.com/maxenceMB/doctors-office-api">github de l'API</a>)</h2>
+                  <ul>
+                    <li>Hebergement serveur Apache</li>
+                    <li>API Rest</li>
+                    <li>PHP</li>
+                    <li>Collaboration à 2</li>
+                    <li>Système de compte</li>
+                  </ul>
+                  <img src="static/images/myprojects/doctorsoffice.png" alt="Image de Site de gestion d'un cabinet médical avec API">
                 </div>
                 <div class="slide">
                   <h2>Application complète de gestion de tournoi en Java (<a href="https://github.com/enzolouis/sae-but-gestion-saison-competition-e-sport">github</a>)</h2>
-                  <img src="static/images/myprojects/tournoiapp.png" alt="Image 3">
+                  <ul>
+                    <li>Projet universitaire</li>
+                    <li>Architecture MVC</li>
+                    <li>Test unitaire et intégration</li>
+                    <li>JSwing</li>
+                    <li>Planification en méthode agile</li>
+                  </ul>
+                  <img src="static/images/myprojects/tournoiapp.png" alt="Image de Application complète de gestion de tournoi en Java">
+                </div>
+                <div class="slide">
+                  <h2>Éditeur de code basique avec Qt</h2>
+                  <ul>
+                    <li>Qt</li>
+                    <li>Processus système</li>
+                    <li>Parser/Lexer</li>
+                  </ul>
+                  <img src="static/images/myprojects/quickcode.png" alt="Image de Éditeur de code basique avec Qt">
                 </div>
                 <div class="slide">
                   <h2>Démineur, Snake, Blockudoku avec JavaSwing (<a href="https://github.com/enzolouis/game-unite">github</a>)</h2>
-                  <img src="static/images/myprojects/demineur_snake_blockudoku.png" alt="Image 5">
+                  <ul>
+                    <li>Projet universitaire</li>
+                    <li>Architecture MVC</li>
+                    <li>JSwing</li>
+                    <li>Planification en méthode agile</li>
+                  </ul>
+                  <img src="static/images/myprojects/demineur_snake_blockudoku.png" alt="Image de Démineur, Snake, Blockudoku avec JavaSwing">
                 </div>
                 <div class="slide">
-                  <h2>Horloge avec QT</h2>
-                  <img src="static/images/myprojects/horloge.png" alt="Image 3">
+                  <h2>Horloge avec Qt</h2>
+                  <ul>
+                    <li>Projet universitaire</li>
+                    <li>Architecture MVC</li>
+                    <li>JSwing</li>
+                    <li>Planification en méthode agile</li>
+                  </ul>
+                  <img src="static/images/myprojects/horloge.png" alt="Image de Horloge avec Qt">
                 </div>
                 <div class="slide">
                   <h2>Simulateur de 3d avec PyGame</h2>
-                  <img src="static/images/myprojects/simulateur3D.png" alt="Image 2">
+                  <ul>
+                    <li>Projet universitaire</li>
+                    <li>Architecture MVC</li>
+                    <li>JSwing</li>
+                    <li>Planification en méthode agile</li>
+                  </ul>
+                  <img src="static/images/myprojects/simulateur3D.png" alt="Image de Simulateur de 3d avec PyGame">
                 </div>
                 <div class="slide">
-                  <h2>Éditeur de code basique avec QT</h2>
-                  <img src="static/images/myprojects/quickcode.png" alt="Image 4">
+                  <h2>Calculatrice avec Parser/Lexer avec le principe d'Automate</h2>
+                  <ul>
+                    <li>Projet universitaire</li>
+                    <li>Architecture MVC</li>
+                    <li>JSwing</li>
+                    <li>Planification en méthode agile</li>
+                  </ul>
+                  <img src="static/images/myprojects/calculatrice_parser.png" alt="Image de Calculatrice avec Parser/Lexer">
                 </div>
                 <div class="slide">
-                  <h2>Calculatrice avec Parser/Lexer</h2>
-                  <img src="static/images/myprojects/calculatrice.png" alt="Image 5">
+                  <h2><span style="font-family:'Permanent Marker', cursive">ToListenList</span> : Rechercher et enregistrer des musiques/artistes pour plus tard</h2>
+                  <ul>
+                    <li>Projet personnel</li>
+                    <li>API Spotify</li>
+                    <li>JSwing</li>
+                    <li>Planification en méthode agile</li>
+                  </ul>
+                  <img src="static/images/myprojects/tolistenlist_homepage.png" alt="Image de ...">
+                </div>
+                <div class="slide">
+                  <h2><span style="font-family:'Permanent Marker', cursive">ToReadList</span> : Rechercher et enregistrer des livres pour plus tard</h2>
+                  <ul>
+                    <li>Projet personnel</li>
+                    <li>API Spotify</li>
+                    <li>JSwing</li>
+                    <li>Planification en méthode agile</li>
+                  </ul>
+                  <img src="static/images/myprojects/toreadapp_all.png" alt="Image de ...">
+                </div>
+                <div class="slide">
+                  <h2><span style="font-family:'Permanent Marker', cursive">Carnet de voyage</span> : Souvenirs voyages en photos</h2>
+                  <ul>
+                    <li>Projet personnel</li>
+                    <li>API Spotify</li>
+                    <li>JSwing</li>
+                    <li>Planification en méthode agile</li>
+                  </ul>
+                  <img src="static/images/myprojects/carnetdevoyage_3.png" alt="Image de ...">
                 </div>
               </div>
               <div class="carousel-controls">
@@ -311,22 +392,83 @@
         Mon profil
       </div>
 
-      <div class="content">
-        <h2>
-          20 ans, 5 ans de programmation, Licence 3 Informatique (diplômé d'un DUT Informatique)
-        </h2>
-        <div class="two-sides">
-          <div>
+
+        <!--<div style="border-top-left-radius: 5px;">
+            <span><i class="fa-solid fa-award"></i></span>
+            <span>Baccalauréat mention très bien, Lycée Albert Claveille </span>
+        </div>-->
+        
+        <!--<div id="current-diploma">
+            <span><i class="fa-solid fa-spinner"></i></span>
+            <span>Licence Informatique, Université Toulouse III Paul Sabatier</span><br>
+            <span id="countdown-licence-month" class="countdown-licence"></span>
+            <span id="countdown-licence-day" class="countdown-licence"></span>
+            <span id="countdown-licence-hour" class="countdown-licence"></span>
+            <span id="countdown-licence-minute" class="countdown-licence"></span>
+            <span id="countdown-licence-second" class="countdown-licence">17</span>
+        </div>
+        <div id="future-diploma" style="border-bottom-left-radius: 5px;">
+            <span><i class="fa-solid fa-circle-xmark"></i></span>
+            <span>Master Informatique</span>
+        </div>-->
+
+
+
+        <!--<div class="two-sides">
+          <div class="profile-side profile-side-right">
             Je suis dans le développement informatique depuis à peu près 5 ans.
             J'ai découvert Python et le développement web lorsque j'étais au lycée.
             Arrivé à l'<span style="font-weight: bold;">IUT Informatique</span> de Toulouse, j'ai découvert davantage de langages et technologies comme Java et SQL.
             
           </div>
 
-          <div>
+          <div class="profile-side profile-side-right">
             Après avoir obtenu mon DUT Informatique, je choisis après réflexion de continuer en <span style="font-weight: bold;">licence 3 à l'<a href="#" style="font-weight:inherit;">université Paul Sabatier</a> de Toulouse</span> afin d'intégrer ensuite un master.
             Durant ces 2 ans de DUT, j'ai pu me professionaliser avec 1 stage de 2 mois à l'<a href="https://www.irit.fr/" style="font-weight: bold;">IRIT</a> en tant que <span style="font-weight: bold;">développeur full-stack</span>.
           </div>
+        </div>-->
+      
+        <div class="profile-card">
+          <div class="profile-image">
+            <div class="big-numbers">
+                <div class="big-number">
+                    <div class="big-number-optional-logo"><img width="50" src="static/images/bougie.png"></div>
+                    <div class="big-number-content"><b><span style="font-size:40px">20</span> ans</b></div>
+                </div>
+                <div class="big-number">
+                    <div class="big-number-optional-logo"><img width="50" src="static/images/experience.png"></div>
+                    <div class="big-number-content"><b><span style="font-size:40px">5</span> ans</b> d'expérience dans le dev en autodidacte</div>
+                </div>
+                <div class="big-number">
+                    <div class="big-number-optional-logo"><img width="50" src="static/images/marquage_iut.png"></div>
+                    <div class="big-number-content"><b>Bac + <span style="font-size:40px">2</span> : DUT Informatique</b> mention <b>bien</b></div>
+                </div>
+                <div class="big-number">
+                    <div class="big-number-optional-logo"><img width="50" src="static/images/marquage_UT2.png"></div>
+                    <div class="big-number-content"><b><span style="font-size:40px">3</span>e année de licence</b> en cours</div>
+                </div>
+                <div class="big-number">
+                    <div class="big-number-optional-logo"><img width="50" src="static/images/irit.png"></div>
+                    <div class="big-number-content"><b><span style="font-size:40px">2</span> mois de stage</b> à l'IRIT à Toulouse</div>
+                </div>
+                <div class="big-number">
+                    <div class="big-number-optional-logo"><img width="50" src="static/images/irit.png"></div>
+                    <div class="big-number-content">Une <b><span style="font-size:40px">10</span>'aine</b> de projet personnel</div>
+                </div>
+            </div>
+        </div>
+        <div class="profile-content">
+            <p>
+                Enzo Louis, <a href="https://www.linkedin.com/in/enzolouis/">@enzolouis</a> (LinkedIn), <a href="https://github.com/enzolouis">@enzolouis</a> (Github)
+            </p>
+            <p>
+                Je suis dans le développement informatique depuis à peu près 5 ans. J'ai découvert Python et le développement web lorsque j'étais au lycée. Arrivé à l'<span class="highlight">IUT Informatique de Toulouse</span>, j'ai découvert davantage de langages et technologies comme Java et SQL.
+            </p>
+            <p>
+                Après avoir obtenu mon DUT Informatique, je choisis, après réflexion sur ce que je voulais vraiment faire dans mon métier, de continuer en <span class="highlight">licence 3 à l'université Paul Sabatier de Toulouse</span> afin d'intégrer ensuite un master. Durant ces 2 ans de DUT, j'ai pu me professionnaliser avec un stage de 2 mois à l'<span class="highlight">IRIT</span> en tant que <span class="highlight">développeur full-stack</span>.
+            </p>
+            <div class="github-card" data-github="enzolouis" data-width="400" data-height="150" data-theme="default"></div>
+            <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
         </div>
       </div>
     </div>
@@ -335,16 +477,16 @@
     
     <div id="outoffrise">
       <div class="content-title">
-        Ma timeline de développeur
+        Ma timeline de dev
       </div>
       <div class="header-frise">
         <p>
           Mai 2019
         </p>
-        <img src="https://avatars.githubusercontent.com/u/65914622?v=4">          
+        <img src="static/images/logo.png">          
       </div>
       <div id="test" style="display:none;position:fixed;top:40%;left:50%;transform: translate(-50%,0);z-index:200000000">
-          <img width="40" src="https://avatars.githubusercontent.com/u/65914622?v=4">
+          <img width="40" src="static/images/logo.png">
         </div>
 
       <div id="frise">
@@ -422,7 +564,7 @@
             <div class="content">
               <p class="time">Septembre</p>
               <h2><i class="fa-solid fa-graduation-cap"></i>3ème année de Licence Informatique</h2>
-              <p class="descr"></p>
+              <p class="descr">Approfondissement de concepts théoriques fondamentaux (Paradigme fonctionnel (OCAML), Outil de vérification de programme (COQ), ...)</p>
             </div>
           </div>
         </div>
@@ -477,7 +619,6 @@
 
   <script src="static/js/index.js"></script>
   <script src="static/js/carousel.js" async></script>
-  <script src="static/js/welcome.js" async></script>
 
 </body>
 </html>

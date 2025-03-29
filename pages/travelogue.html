@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ville</title>
+    <link rel="stylesheet" href="../static/css/travelogue.css">
+    <script defer src="https://use.fontawesome.com/releases/v6.4.2/js/all.js"></script>
+</head>
+<body>
+    <button class="backHidden" id="back">
+        <i class="fa-solid fa-reply"></i> <span id="back-title">Retour</span>
+    </button>
+    <h1 id="title">
+        Carnet de voyage
+    </h1>
+    <div class="header">
+        <div class="hoverjseffect city" id="venezia">
+                <p><span>V</span>enezia</p>
+        </div>
+        <div class="hoverjseffect city" id="milano">
+                <p>Milan<span>o</span></p>
+        </div>
+        <div class="hoverjseffect city" id="nancy">
+                <p><span>N</span>anc<span>y</span></p>
+        </div>
+        <div class="hoverjseffect city" id="toulouse">
+                <p>Tou<span>l</span>ou<span>s</span>e</p>
+        </div>
+        <div class="hoverjseffect city" id="cauterets">
+                <p>Cau<span>t</span>erets</p>
+        </div>
+    </div>
+    
+    <main id="main-nancy" class="gallery">
+        <div class="gallery-item">
+            <img src="../static/images/travelogue/IMG_0101.JPEG" alt="Landscape">
+            <h2>LA PLACE STANISLAS, DÉCEMBRE 2023</h2>
+            <a href="#">CONSTRUITE ENTRE  1751 et 1755</a>
+        </div>
+        <div class="gallery-item">
+            <img src="../static/images/travelogue/IMG_0100.JPEG" alt="Fashion">
+            <h2>FÊTES DE ST-NICOLAS</h2>
+            <a href="#">Les couleurs de l'Ukraine</a>
+        </div>
+        <div class="gallery-item">
+            <img src="../static/images/travelogue/IMG_0102.JPEG" alt="Dancers">
+            <p>HÔTEL DE VILLE</p>
+            <a href="#">dd</a>
+        </div>
+        <div class="gallery-item">
+            <img src="../static/images/travelogue/IMG_0103.JPEG" alt="Shadow Hunter">
+            <h2>SAINT NICOLAS</h2>
+            <a href="#">SEE MORE</a>
+        </div>
+    </main>
+
+    <main id="main-venezia" class="gallery">
+        <div class="gallery-item">
+            <img src="../static/images/travelogue/IMG_2360.JPEG" alt="Landscape">
+            <h2>LE LAMPADAIRE QUI A DONNÉ SA COULEUR A CETTE VISITE</h2>
+            <a href="#">CONSTRUITE ENTRE  1751 et 1755</a>
+        </div>
+        <div class="gallery-item">
+            <img src="../static/images/travelogue/IMG_2345.JPEG" alt="Fashion">
+            <h2>FÊTES DE ST-NICOLAS</h2>
+            <a href="#">Les couleurs de l'Ukraine</a>
+        </div>
+        <div class="gallery-item">
+            <img src="../static/images/travelogue/IMG_2248.JPEG" alt="Dancers">
+            <p>HÔTEL DE VILLE</p>
+            <a href="#">dd</a>
+        </div>
+        <div class="gallery-item">
+            <img src="../static/images/travelogue/IMG_2349.JPEG" alt="Shadow Hunter">
+            <h2>SAINT NICOLAS</h2>
+            <a href="#">SEE MORE</a>
+        </div>
+    </main>
+
+    <script>
+        const title = document.getElementById("title");
+        const backTitle = document.getElementById("back-title");
+        let backBtn = document.getElementById("back")
+
+        let citys = document.getElementsByClassName('city');
+        // boucle pour ajouter un event listener de click sur chaque citys
+        for (let city of citys) {
+            city.addEventListener('click', function() {
+                city.classList.remove("hoverjseffect");
+                city.style.fontSize = "4rem"
+                city.style.fontWeight = "bold"
+                for (let c of citys) {
+                    if (c.id != city.id)
+                        c.style.flex = "0 0 0"
+                        c.style.overflow = "hidden"
+                }
+                city.style.pointerEvents = "none";
+                title.style.display = "none";
+                backTitle.innerHTML = city.id.charAt(0).toUpperCase() + city.id.slice(1);
+                backBtn.classList.add("backVisible");
+                backBtn.classList.remove("backHidden");
+                let main = document.getElementById("main-" + city.id);
+                if (main)
+                    main.style.display = "grid";
+                setTimeout(() => {
+                    document.getElementById("main-" + city.id).scrollIntoView({behavior: "smooth"});
+                }, 1000);
+            });
+        }
+
+        
+        backBtn.addEventListener('click', function() {
+            for (let city of citys) {
+                city.classList.add("hoverjseffect");
+                city.style.flex = "1 1 20%" /* 0% */
+                city.style.overflow = "visible"
+                city.style.fontSize = "30px"
+                city.style.fontWeight = "normal"
+                city.style.pointerEvents = "auto";
+                let main = document.getElementById("main-" + city.id);
+                if (main)
+                    main.style.display = "none";
+            }
+            title.style.display = "block";
+            backBtn.classList.add("backHidden");
+            backBtn.classList.remove("backVisible");
+            
+        });
+    </script>
+</body>
+</html>
