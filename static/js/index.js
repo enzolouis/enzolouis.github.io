@@ -7,8 +7,8 @@ window.addEventListener('load', function() {
     document.querySelector('main').classList.add('loaded');
     setTimeout(function() {
     	document.querySelector('.loader-container').style.display = 'none';
-    }, 1500);
     }, 1000);
+    }, 300);
 });
 
 

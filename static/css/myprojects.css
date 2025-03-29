@@ -134,11 +134,13 @@
 
 .slide ul {
   display: flex; /* redefine display in here because was defined inline in this section (for dots) */
+  flex-flow:row wrap;
   justify-content: center;
   align-items: center;
   gap: 10px;
   margin-top: 0;
   margin-bottom:15px;
+  padding-left:0; /* remove default padding */
 }
 .slide ul li {
   background-color: #ddd;
@@ -179,6 +181,8 @@
   
   .carousel-inner {
     margin:0 1% !important; /* pk j'ai besoin de important ici... a corriger*/
+    display:block;
+    height:100%;
   }
   
   .carousel-dots {
@@ -188,8 +192,19 @@
   .carousel {
     border:none;
   }
+
+  .slide {
+    transform:none;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display:block;
+  }
   
-  .carousel-controls {
+  .carousel-controls, .carousel-dots {
     display:none;
   }
 }
