@@ -65,94 +65,17 @@
 }
 
 
-.countdown-licence {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  background:#0077b6;
-  color: white;
-  padding:3px 5px;
-  border-radius:3px;
-  animation:clint 1s linear infinite;
-}
-
-.countdown-licence::after {
-  font-size: 8px;
-}
-
-#countdown-licence-month::after {
-  content: "mois";
-}
-
-#countdown-licence-day::after {
-  content: "jours";
-}
-
-#countdown-licence-hour::after {
-  content: "heures";
-}
-
-#countdown-licence-minute::after {
-  content: "minutes";
-}
-
-#countdown-licence-second::after {
-  content: "secondes";
-}
-
-@keyframes clint {
-  0% {
-    transform: scale(1.05);
-  }
-  
-  50% {
-    transform: scale(1);
-  }
-  
-  100% {
-    transform: scale(1.05);
-  }
-}
-
-.dut {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding:10px;
-  background:var(--white);
-  color: var(--green);
-  font-weight: bold !important;
-  text-align: center;
-  font-size:13px;
-}
-
-.dut svg {
-  font-size: 23px;
-}
-
-
-
-
-
 
 @media (max-width: 800px) {
   #projects .content-title {
       margin:0 0px;
-    }
-  
-  #profile .content-title {
-    margin:0 0px;
-  }
-  
-  #profile .two-sides {
-    margin:0 0px;
   }
 
-  div#me {
+  #me {
     height:100%;
   }
   
-  div#me div {
+  #me div {
     flex:0.3 0 50%;
   }
   
@@ -161,7 +84,7 @@
     flex:0 0 40% !important;
   }
   
-  div#outoffrise .content-title {
+  #timeline .content-title {
     margin:0 0px;
   }
   

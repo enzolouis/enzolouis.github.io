@@ -1,24 +1,24 @@
 
-div#outoffrise {
+#timeline {
   padding-bottom:50px;
   background-color:var(--white);
 }
 
-#outoffrise .content-title {
+#timeline .content-title {
   color:var(--green) !important;
 }
 
-div#outoffrise .header-frise {
+#timeline .header-frise {
   text-align:center;
   
   color:var(--dark-green);
 }
 
-div#outoffrise .header-frise p {
+#timeline .header-frise p {
   margin:10px;
 }
 
-div#outoffrise .header-frise > img {
+#timeline .header-frise > img {
   display:block;
   margin:auto;
   width:40px;
@@ -115,4 +115,13 @@ div#frise div.element:nth-child(odd) .time {
 div#frise div.element:nth-child(odd) {
   margin-left:5%;
   margin-right:55%;
+}
+
+#logo-floating {
+  display:none;
+  position:fixed;
+  top:40%;
+  left:50%;
+  transform: translate(-50%,0);
+  z-index:200000000;
 }

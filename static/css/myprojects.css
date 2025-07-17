@@ -1,210 +1,249 @@
-
 #projects {
   background-color:var(--green);
   padding-bottom:5%;
   padding-top:5%;
 }
 
-
-.container-carousel {
-  background-color:none;
-  margin:0;
-  /*Mieux avec ça : ? margin: 2% 20%;*/
-  overflow: hidden;
+body.no-scroll {
+    overflow: hidden !important;
+    height: 100vh !important;
 }
 
-.carousel {
-  position: relative;
-  
-  background-color:unset;
-  border:none;
-}
-.carousel-inner {
-  display: flex;
-  overflow: hidden;
-  height: 85vh;
-  flex-wrap: nowrap;
-  border-top-right-radius:5px;
-  border-top-left-radius:5px;
-  
-  background-color:#eeeeee;
-  margin:0 10%;
-}
-.slide {
-  flex: 0 0 100%;
-  height: 100%;
-  transition: .5s ease-in-out;
-}
-
-.slide h2 {
-  text-align:center;
-  margin-top:30px;
-  margin-bottom:10px;
-}
-
-.slide img {
-  margin:auto;
-  width: 80%;
-  height: 80%;
-  object-fit: contain;
-  display:block;
-  
-}
-.carousel-controls {
-  
-  opacity:0.8;
-    position: absolute;
-    z-index: 5;
-    left: 1%;
-    right:1%;
-    top:45%;
+.gallery-wrapper {
     display: flex;
-    justify-content: space-between;
-  
-  
-}
-.carousel-controls button {
-    padding:50px;
-    background: none;
-    border-radius: 10px;
-    background-size: cover;
-    border: none;
-    cursor: pointer;
-    transition: all 0.1s ease-out;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow-x: hidden;
 }
 
-.carousel-controls button:hover {
-    transform: scale(1.1);
+.gallery-wrapper .grid {
+    width: 100%;
+    margin: 0; /* ajouté */
+    position: relative;
+    padding: 0; /* pas de padding horizontal */
+    overflow-x:hidden;
+    padding:10px auto;
+    overflow-y: hidden;
+}
+.gallery-wrapper .grid.gridloaded {
+    max-width: 1200px;
 }
 
-.carousel-controls button:nth-child(1) {
-    background-image: url("../images/leftarrowwhite.png");/*https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/leftarrow.png?v=1709073207857*/
+.gallery-wrapper .grid-item {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
 }
-.carousel-controls button:nth-child(2) {
-    background-image: url("../images/rightarrowwhite.png");/*https://cdn.glitch.global/ca48c3f1-3c91-413b-ab92-2ec674cda458/rightarrow.png?v=1709073209311*/
+
+.gallery-wrapper .grid-sizer, .gallery-wrapper .grid-item {
+    width:32.8%;
 }
 
+@media (max-width: 768px) {
+  .gallery-wrapper .grid-sizer,
+  .gallery-wrapper .grid-item {
+    width: 48%;
+  }
+}
 
+@media (max-width: 480px) {
+  .gallery-wrapper .grid-sizer,
+  .gallery-wrapper .grid-item {
+    width: 100%;
+  }
+}
 
+.gallery-wrapper .grid-item:hover > h2, .gallery-wrapper .grid-item:hover > ul {
+    display:none;
+}
 
-
-.carousel-dots {
-  /*
+.gallery-wrapper .grid-item::after {
+    z-index: 1;
+    content: '';
+    display: block;
     position: absolute;
-    z-index: 5;
-    left: 50%;
-    right: 50%;
-    bottom: 3.5%;
-  */
-    display: flex;
-    justify-content: center;
-  background-color:#eeeeee;
-  margin:0 10%;
-  padding:10px;
-  
-  border-bottom-right-radius:5px;
-  border-bottom-left-radius:5px;
-}
-.carousel-dots .dot {
-    border-radius: 50%;
-    margin: 5px;
-    cursor: pointer;
-}
-.carousel-dots .active {
-  border:10px solid var(--dark-green);
-}
-.carousel-dots .inactive {
-  border:10px solid var(--green);
-}
-
-.container-carousel ul, .container-carousel ul li {
-  display:inline;
-}
-
-.container-carousel ul li svg {
-  width:7px;
-  margin-right:4px;
-}
-.container-carousel ul li.langage-python svg {
-  color:orange;
-}
-
-
-
-
-.slide ul {
-  display: flex; /* redefine display in here because was defined inline in this section (for dots) */
-  flex-flow:row wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-top: 0;
-  margin-bottom:15px;
-  padding-left:0; /* remove default padding */
-}
-.slide ul li {
-  background-color: #ddd;
-  padding: 5px 10px;
-  border-radius: 32px;
-  font-size: small;
-  color: #222;
-  text-align: center;
-}
-
-.slide-other-projects > div {
-  display: flex;
-  overflow: scroll;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  gap:20px;
-  height: 85vh;
-}
-
-.slide-other-projects > div > div {
-  flex: 0 0 33%;
-}
-
-.slide-other-projects > div > div h2 {
-  font-size: 15px;
-}
-
-.slide-other-projects > div > div ul li {
-  font-size: 12px;
-}
-
-
-
-@media (max-width: 800px) {
-	.container-carousel {
-		margin:2% 0;
-	}
-  
-  .carousel-inner {
-    margin:0 1% !important; /* pk j'ai besoin de important ici... a corriger*/
-    display:block;
-    height:100%;
-  }
-  
-  .carousel-dots {
-    margin:0 1%;
-  }
-  
-  .carousel {
-    border:none;
-  }
-
-  .slide {
-    transform:none;
-  }
-
-  .slide img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    display:block;
-  }
-  
-  .carousel-controls, .carousel-dots {
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius:4px;
+}
+
+.gallery-wrapper .grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.gallery-wrapper .grid-item h2 {
+    z-index: 2;
+    position:absolute;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    font-size:15px;
+    padding-left:10px;
+    padding-right:10px;
+    font-weight:500;
+    margin: 0;
+}
+
+.gallery-wrapper .grid-item p {
+    position: absolute;
+    z-index: 2;
+    bottom: 60px;
+    left: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.gallery-wrapper .grid-item ul {
+    position: absolute;
+    z-index: 2;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    color: #fff;
+    font-size: 12px;
+    pointer-events: none;
+    padding: 0;
+    margin: 0;
+}
+
+.gallery-wrapper .grid-item ul li {
+    background-color: #ddd;
+    padding: 2px 4px;
+    border-radius: 32px;
+    font-size: 9px;
+    color: #222;
+    text-align: center;
+    font-weight:500;
+}
+
+.gallery-wrapper .grid-item .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    /*pointer-events: none;*/
+    z-index: 3;
+    font-weight:800;
+    border:none;
+    font-family:inherit;
+    cursor:pointer;
+}
+
+.gallery-wrapper .grid-item:hover .overlay {
+    opacity: 1;
+}
+
+.swiper {
+    width: 100%;
+    /*max-width: 1000px;*/
+    margin: auto;
+    height:100vh;
+}
+
+.swiper-outer {
+    width: 100%;
+    position:fixed;
     display:none;
-  }
+    background:white;
+    z-index:4;
+    top:0;
+    left:0;
+}
+
+.swiper-slide {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: auto;
+}
+
+.swiper-slide img {
+    flex:1;
+    max-width: 100%;
+    max-height: 80%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.swiper-slide p {
+    flex:0;
+}
+
+.project-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.tech-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.tech-list li {
+    background: #e0e0e0;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    font-size: 0.85rem;
+}
+
+.swiper-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.swiper-header .project-info {
+    flex:1;
+}
+
+.swiper-header .project-actions {
+    flex:0;
+}
+
+.project-actions-close {
+    cursor: pointer;
+    background-color: inherit;
+    border:none;
+    font-size:30px;
 }

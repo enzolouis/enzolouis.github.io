@@ -8,9 +8,9 @@ footer {
 
 	padding: 10px 0 5px 0;
 	display: block;
-  
-  background-color: var(--white);
-  border-top:1px solid var(--green);
+
+	background-color: var(--white);
+	border-top:1px solid var(--green);
 
 	margin-top: auto; /* MISE EN PLACE DU DISPLAY FLEX POUR COLLER LE FOOTER EN BAS DE PAGE QUAND LA PAGE EST COURTE */
 }
@@ -21,7 +21,7 @@ footer div.container ul.flex-ul {
 	align-items: center;
 	justify-content: space-around;
 	flex-flow: row wrap;
-  margin:0;
+ 	margin:0;
 }
 
 footer div.container ul.flex-ul li {
@@ -29,16 +29,16 @@ footer div.container ul.flex-ul li {
 }
 
 footer div.container ul.flex-ul li span.url-begin {
-  color: #52505e;
+	color: #52505e;
 }
 
 footer div.container ul.flex-ul li span.url-end {
-  color: black;
+	color: black;
 }
 
 footer div.container p.copyright {
-  margin:0;
-  text-align:center;
+	margin:0;
+	text-align:center;
 	color: #52505e;
 	align-self: flex-end;
 }

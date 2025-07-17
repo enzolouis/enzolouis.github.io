@@ -4,14 +4,9 @@ header.mediascreen {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
-	/* align-items: center; */
   position:absolute;
   width:100%;
   z-index:500;
-  /*position:fixed;*/
-  
-  /*background-color: var(--white);*/
-  /*font-family: "Anta", sans-serif;*/
   font-family: "Permanent Marker", cursive;
 }
 
@@ -26,6 +21,7 @@ nav#nav {
 nav#nav ul {
   display:flex;
   margin:0;
+  justify-content: flex-end;
 }
 nav#nav ul li {
   flex:0.2;
@@ -54,9 +50,6 @@ nav#nav ul li a {
   color:var(--white);
   font-size:20px;
 }
-/*nav#nav ul li#currentPage > a::before {
-  height:5px;
-}*/
 
 nav#nav ul li:hover > a::before, nav#nav ul li#currentPage:hover > a::before {
   transition:all 0.2s ease;
@@ -64,15 +57,6 @@ nav#nav ul li:hover > a::before, nav#nav ul li#currentPage:hover > a::before {
   font-size:40px;
   content:'\2193';
 }
-/*
-* {
-  cursor: url(cursor.png) 4 12, pointer;
-}
-
-a, button {
-  cursor: url(cursor_reverse.png) 4 12, pointer;
-}
-*/
 
 nav#nav ul li:hover > a {
   color:var(--green);
@@ -103,122 +87,67 @@ header.mediascreen > div#visible div span:nth-child(3) {
 	margin-left: 20px;
 }
 
-header.mediascreen > div#visible button.hamburger {
+
+
+
+
+div#invisible {
+  position: fixed;
+  width: 100%;
+  bottom:0;
+  left:0;
+  font-family: "Permanent Marker", cursive;
   display:none;
-  flex:0 0 5%;
-	background: none;
-	cursor: pointer;
-	color: #52505e;
-	font-size: 200%;
-}
-
-
-
-
-
-
-
-header.mediascreen > div#invisible {
-	display: flex;
-  flex-flow:column wrap;
-	visibility: hidden;
-	height: 0;
-	width: 45%;
+  flex-flow:row wrap;
   background:var(--green);
   width:100%;
+  z-index:1000;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
-header.mediascreen > div#invisible > nav {
-	height: 100%;
+div#invisible > nav {
+  width: 100%;
 }
 
-
-header.mediascreen > div#invisible > nav ul {
-	padding: 0;
-	display: flex;
-	flex-flow: column wrap;
-  align-items: center;
+div#invisible > nav ul {
+  display: flex;
   justify-content: space-around;
-  height:70%;
+  margin: 0;
+  padding: 0;
+  align-items: center;
 }
 
-header.mediascreen > div#invisible > nav ul li {
-	transition: 0.3s all;
-	margin-bottom: 10px;
+div#invisible > nav ul li {
+  padding: 10px 0;
+  list-style-type: none;
+  position: relative;
 	font-size: 15px;
   flex:0;
+  transition: transform 0.2s ease;
 }
 
-
-
-header.mediascreen > div#invisible > nav ul li a {
+div#invisible > nav ul li a {
 	color: white;
+  transition: transform 0.2s ease;
 }
 
-header.mediascreen > div#invisible > nav ul li:hover > a {
-	color: #f5f6fa;
-	transition: 0.3s all;
+div#invisible > nav ul li:hover {
+  transform: scale(1.2);
 }
 
-
-
-header.mediascreen > div#invisible div.nav-buttons {
-	margin-top: 35px;
-	padding: 0;
+div#invisible > nav ul li.current {
+  transform: scale(1.3);
 }
-
-header.mediascreen > div#invisible div.nav-buttons a {
-	display: inline-block;
-	padding: 5px 10px;
-	border-radius: 5px;
-	font-size: 15px;
-	transition: all 0.3s;
-	margin-right: 10px;
-}
-
-header.mediascreen > div#invisible div.nav-buttons a.button-1 {
-	background-color: #00cec9;
-	color: #f5f6fa;
-}
-
-header.mediascreen > div#invisible div.nav-buttons a.button-1:hover {
-	background-color: #f5f6fa;
-	color: #00cec9;
-}
-
-header.mediascreen > div#invisible div.nav-buttons a.button-2 {
-	background-color: #0097e6;
-	color: #f5f6fa;
-}
-
-header.mediascreen > div#invisible div.nav-buttons a.button-2:hover {
-	background-color: #f5f6fa;
-	color: #0097e6;
-}
-
-
 
 @media (max-width: 800px) {
-  header.mediascreen > div#visible div span {
+  header.mediascreen {
     display:none;
-    /*font-size: 150%;
-    letter-spacing: 10px;*/
+  }
+  div#visible div span {
+    display:none;
   }
 
-  header.mediascreen > div#visible div span:nth-child(2) {
-    margin-left: 0;
-  }
-
-  header.mediascreen > div#visible div span:nth-child(3) {
-    margin-left: 0;
-  }
-  
-  header.mediascreen > div#visible button.hamburger {
-    display:block;
-    color:white;
-    margin:5px;
-    margin-left:auto;
-  }
   nav#nav {
     display:none;
   }
@@ -226,10 +155,11 @@ header.mediascreen > div#invisible div.nav-buttons a.button-2:hover {
   #welcome-background {
     display:none;
   }
-  
+
+  div#invisible {
+    display: flex;
+  }
 }
-
-
 
 
 #absoluteBackground {

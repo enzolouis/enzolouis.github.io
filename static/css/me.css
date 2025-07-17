@@ -1,6 +1,4 @@
-
-
-div#me {
+#me {
   background-color:var(--grey);
   display:flex;
   flex-flow:row wrap;
@@ -10,13 +8,11 @@ div#me {
   height:100vh;
 }
 
-
-
-div#me > div {
+#me > div {
   flex:0 0 25%;
 }
 
-div#me > .content-title {
+#me > .content-title {
   flex:0 0 100%;
   font-size:40px;
   color:var(--green);
@@ -24,11 +20,11 @@ div#me > .content-title {
 	padding-bottom: 5%;
 }
 
-div#me svg {
+#me svg {
   font-size:30px;
 }
 
-div#me p {
+#me p {
   color:#708390;
 }
 

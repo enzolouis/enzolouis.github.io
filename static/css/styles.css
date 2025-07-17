@@ -1,20 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;700&display=swap');
-
-
-/* use */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap');
-/*@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@800&display=swap');*/
-@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
 
 @import 'me.css';
 @import 'mytimeline.css';
 @import 'myprojects.css';
-@import 'myprofile.css';
 @import 'welcome.css';
 @import 'header.css';
 @import 'footer.css';
@@ -42,6 +33,16 @@ html {height: 100%}
 a:visited {
   color:#1f78d2;
 }
+/* CUSTOM CURSORS */
+/*
+* {
+  cursor: url(cursor.png) 4 12, pointer;
+}
+
+a, button {
+  cursor: url(cursor_reverse.png) 4 12, pointer !important;
+}
+*/
 
 body {
 	margin: 0;
@@ -113,39 +114,19 @@ main {
 }
 
 
-.sep1, .sep2, .sep3, .sep4 {
+.sep1, .sep2 {
   height:300px;
 }
 
 .sep1::before {
-  background:none;
-}
-
-.sep1::after {
-  background-color:var(--grey);
-}
-
-.sep2::before {
   background-color: var(--grey);
 }
 
-.sep2::after {
+.sep1::after, .sep2::before {
   background-color: var(--green);
 }
 
-.sep3::before {
-  background-color:var(--green);
-}
-
-.sep3::after {
-  background-color:var(--very-dark-green);
-}
-
-.sep4::before {
-  background-color:var(--very-dark-green);
-}
-
-.sep4::after {
+.sep2::after {
   background-color:var(--white);
 }
 
@@ -190,7 +171,7 @@ main {
   align-items: center;
   height: 100vh;
   transition: all 1s ease-in-out; /* Ajoute une transition de fondu */
-  }
+}
 
 .loader-container img {
 	animation: up 2s forwards;
@@ -208,9 +189,6 @@ main {
 	100% {
 		transform: scale(20);
 	}
-}
-
-body {
 }
 
 .loader-container.loaded {
