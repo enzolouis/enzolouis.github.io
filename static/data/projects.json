@@ -3,20 +3,21 @@
     "id": "embin",
     "title": "Embin : Site de partage de code",
     "technos": ["Projet perso", "Déploiement dev/prod", "Système d'authentification", "Django", "PostgreSQL"],
-    "image": "static/images/myprojects/embin2.png",
+    "image": "static/images/myprojects/embin/home_page.png",
     "images": [
-      { "src": "static/images/myprojects/embin3.png", "caption": "Système d'authentification sécurisé" },
-      { "src": "static/images/myprojects/embin2.png", "caption": "Système d'authentification sécurisé" }
+      { "src": "static/images/myprojects/embin/login_page.png", "caption": "Système d'authentification intégré par Django" },
+      { "src": "static/images/myprojects/embin/home_page.png", "caption": "Coloration syntaxique et système de partage universelle via un code hexadecimal" },
+      { "src": "static/images/myprojects/embin/bins_page.png", "caption": "Base de données postgreSQL : système de favoris, ..." }
     ],
     "github-link": "https://github.com/enzolouis/embin"
   },
-  {
+  { 
     "id": "proxichat",
     "title": "Proxichat : Chat en réseau LAN",
     "technos": ["Projet perso", "Socket", "Parrallélisme", "Qt"],
     "image": "static/images/myprojects/proxichat1.png",
     "images": [
-      { "src": "static/images/myprojects/proxichat1.png", "caption": "desc" }
+      { "src": "static/images/myprojects/proxichat1.png", "caption": "" }
     ],
     "github-link": "https://github.com/enzolouis/pyqt-socket-chat"
   },
@@ -26,7 +27,7 @@
     "technos": ["Projet perso", "Websocket", "Authentification", "Temps réel", "Cache"],
     "image": "static/images/myprojects/socialnetworkweb.png",
     "images": [
-      { "src": "static/images/myprojects/socialnetworkweb.png", "caption": "desc" }
+      { "src": "static/images/myprojects/socialnetworkweb.png", "caption": "" }
     ],
     "github-link": "https://github.com/enzolouis/social-network-web"
   },
@@ -36,26 +37,29 @@
     "technos": ["Professionnel", "Full-stack", "Maintenance et migrations", "Hébergement serveur", "Versionnage", "Bootstrap", "Architecture NodeJS"],
     "image": "static/images/myprojects/crackito.png",
     "images": [
-      { "src": "static/images/myprojects/crackito.png", "caption": "desc" }
+      { "src": "static/images/myprojects/crackito.png", "caption": "" }
     ]
   },
   {
     "id": "doctorsoffice",
     "title": "Site de gestion d'un cabinet médical avec API",
     "technos": ["Universitaire", "Hebergement serveur Apache", "Création d'API Rest", "PHP", "Collaboration à 2", "Système de compte"],
-    "image": "static/images/myprojects/doctorsoffice1.png",
+    "image": "static/images/myprojects/doctorsoffice/home_page.png",
     "images": [
-      { "src": "static/images/myprojects/doctorsoffice1.png", "caption": "desc" }
+      { "src": "static/images/myprojects/doctorsoffice/home_page.png", "caption": "Création/Modification/Suppression géré par l'API" },
+      { "src": "static/images/myprojects/doctorsoffice/login_page.png", "caption": "Système d'authentification via JWT Token généré par l'API" },
+      { "src": "static/images/myprojects/doctorsoffice/api_documentation.png", "caption": "2 API : Authentification (JWT Token) et Cabinet médical (CRUD pour patient/médecin/consultation)" }
+
     ],
     "github-link": "https://github.com/enzolouis/doctors-office-website"
   },
   {
     "id": "tournoi",
     "title": "Application complète de gestion de tournoi en Java",
-    "technos": ["Universitaire", "Architecture MVC", "Test unitaire et intégration", "JSwing", "Planification en méthode agile"],
+    "technos": ["Universitaire", "Architecture MVC", "Test unitaire et intégration", "Swing", "Planification en méthode agile"],
     "image": "static/images/myprojects/tournoiapp2_1.png",
     "images": [
-      { "src": "static/images/myprojects/tournoiapp2_1.png", "caption": "desc" }
+      { "src": "static/images/myprojects/tournoiapp2_1.png", "caption": "" }
     ],
     "github-link": "https://github.com/enzolouis/sae-but-gestion-saison-competition-e-sport"
   },
@@ -63,9 +67,9 @@
     "id": "quickcode",
     "title": "Éditeur de code basique avec Qt",
     "technos": ["Personnel", "Qt", "Processus système", "Parser/Lexer"],
-    "image": "static/images/myprojects/quickcode.png",
+    "image": "static/images/myprojects/quickcode/main_window.png",
     "images": [
-      { "src": "static/images/myprojects/quickcode.png", "caption": "desc" }
+      { "src": "static/images/myprojects/quickcode/main_window.png", "caption": "Coloration syntaxique universelle, console basique" }
     ]
   },
   {
@@ -74,7 +78,7 @@
     "technos": ["C++", "QT"],
     "image": "static/images/myprojects/metronome1.png",
     "images": [
-      { "src": "static/images/myprojects/metronome1.png", "caption": "desc" }
+      { "src": "static/images/myprojects/metronome1.png", "caption": "Découverte du C++ via cette app" }
     ],
     "github-link": "https://github.com/enzolouis/cpp-qt-metronome-app"
   },
@@ -84,74 +88,63 @@
     "technos": ["Personnel", "API Spotify"],
     "image": "static/images/myprojects/tolistenlist_homepage.png",
     "images": [
-      { "src": "static/images/myprojects/tolistenlist_homepage.png", "caption": "desc" }
+      { "src": "static/images/myprojects/tolistenlist_homepage.png", "caption": "Authentification via compte Spotify (API)" }
     ]
   },
   {
     "id": "toreadapp",
     "title": "ToReadList : Rechercher et enregistrer des livres pour plus tard",
     "technos": ["Universitaire", "Android Studio"],
-    "image": "static/images/myprojects/toreadapp_home.png",
+    "image": "static/images/myprojects/toreadapp/home.png",
     "images": [
-      { "src": "static/images/myprojects/toreadapp_home.png", "caption": "desc" }
+      { "src": "static/images/myprojects/toreadapp/add_book.png", "caption": "Ajout de livre en auto complétion via une API" },
+      { "src": "static/images/myprojects/toreadapp/home.png", "caption": "" }
     ]
   },
   {
     "id": "carnetvoyage",
     "title": "Carnet de voyage",
-    "technos": ["Personnel"],
-    "image": "static/images/myprojects/carnetdevoyage_2.png",
+    "technos": ["Personnel", "Design web"],
+    "image": "static/images/myprojects/carnetdevoyage/venezia.png",
     "images": [
-      { "src": "static/images/myprojects/carnetdevoyage_2.png", "caption": "desc" },
-      { "src": "static/images/myprojects/carnetdevoyage_1.png", "caption": "desc" },
-      { "src": "static/images/myprojects/carnetdevoyage_2.1.png", "caption": "desc" },
-      { "src": "static/images/myprojects/carnetdevoyage_2.png", "caption": "desc" }
+      { "src": "static/images/myprojects/carnetdevoyage/venezia.png", "caption": "" },
+      { "src": "static/images/myprojects/carnetdevoyage/liste.png", "caption": "" }
     ]
   },
   {
     "id": "pirate",
     "title": "Jeu de carte de pirates",
-    "technos": ["Universitaire", "Architecture ECB", "Architecture Seeheim", "UML", "Test"],
+    "technos": ["Universitaire", "Architecture ECB", "Architecture Seeheim", "Programmation en amont en UML", "Test"],
     "image": "static/images/myprojects/projetpirate2.png",
     "images": [
-      { "src": "static/images/myprojects/projetpirate2.png", "caption": "desc" }
+      { "src": "static/images/myprojects/projetpirate2.png", "caption": "" }
     ]
   },
   {
     "id": "horloge",
     "title": "Horloge avec Qt",
-    "technos": ["Personnel", "Architecture MVC", "JSwing", "Planification en méthode agile"],
+    "technos": ["Personnel", "Architecture MVC", "Swing", "Planification en méthode agile"],
     "image": "static/images/myprojects/horloge1.png",
     "images": [
-      { "src": "static/images/myprojects/horloge1.png", "caption": "desc" }
+      { "src": "static/images/myprojects/horloge1.png", "caption": "" }
     ]
   },
   {
     "id": "project3d",
-    "title": "Simulateur de 3d avec PyGame",
-    "technos": ["Personnel", "Architecture MVC", "JSwing", "Planification en méthode agile"],
+    "title": "Simulateur basique de 3d en 2d avec PyGame",
+    "technos": ["Personnel", "Pygame", "Moteur de jeu", "Mathématiques"],
     "image": "static/images/myprojects/simulateur3D.png",
     "images": [
-      { "src": "static/images/myprojects/simulateur3D.png", "caption": "desc" }
+      { "src": "static/images/myprojects/simulateur3D.png", "caption": "" }
     ]
   },
   {
     "id": "calculatrice",
-    "title": "Calculatrice avec Parser/Lexer avec le principe d'Automate",
-    "technos": ["Personnel", "Qt", "Parser/Lexer MVC"],
+    "title": "Calculatrice avec Parser/Lexer",
+    "technos": ["Personnel", "Qt", "Parser/Lexer"],
     "image": "static/images/myprojects/calculatrice_parser.png",
     "images": [
-      { "src": "static/images/myprojects/calculatrice_parser.png", "caption": "desc" }
+      { "src": "static/images/myprojects/calculatrice_parser.png", "caption": "" }
     ]
-  },
-  {
-    "id": "minigames",
-    "title": "Démineur, Snake, Blockudoku",
-    "technos": ["Personnel", "Architecture MVC", "JSwing", "Méthode agile"],
-    "image": "static/images/myprojects/demineur_snake_blockudoku.png",
-    "images": [
-      { "src": "static/images/myprojects/demineur_snake_blockudoku.png", "caption": "desc" }
-    ],
-    "github-link": "https://github.com/enzolouis/game-unite"
   }
 ]

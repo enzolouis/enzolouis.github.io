@@ -1,0 +1,12 @@
+[
+    {
+        "id": "minigames",
+        "title": "Démineur, Snake, Blockudoku",
+        "technos": ["Personnel", "Architecture MVC", "Swing"],
+        "image": "static/images/myprojects/demineur_snake_blockudoku.png",
+        "images": [
+        { "src": "static/images/myprojects/demineur_snake_blockudoku.png", "caption": "desc" }
+        ],
+        "github-link": "https://github.com/enzolouis/game-unite"
+    }
+]
