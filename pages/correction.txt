@@ -35,3 +35,6 @@ gérer contraintes taille max nom (100)
 Problème BD :
 crotch* pas cratch (cratch en bd)
 bustcirc * pas bustCirc
+
+-- 
+page qui scroll à droite sur tablette et tel 
