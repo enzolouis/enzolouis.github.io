@@ -3,8 +3,8 @@ const formatDate = iso => {
     
     // Liste des mois en anglais
     const months = [
-        "January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December"
+        "Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.",
+        "Jul.", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."
     ];
     
     const day = d.getDate(); 
@@ -20,7 +20,7 @@ const formatDate = iso => {
     // Format sans minutes si pile (ex: "11am"), sinon "11:30am"
     const time = minutes === "00" ? `${hours}${ampm}` : `${hours}:${minutes}${ampm}`;
     
-    return `${day} ${month} ${year} at ${time}`;
+    return `${day} ${month} ${year} (${time})`;
 };
 
 function annulationSuppression(button) {
@@ -72,18 +72,19 @@ getAllByAPI().then(usagers => {
 
         const patternSize = document.createElement("p")
         patternSize.className = "label"
-        patternSize.textContent = `Size ${Math.floor(usager.chestCirc / 2)} cm`
+        patternSize.textContent = `Size: ${usager.chestCirc / 2} cm`
 
         const labelSpan = document.createElement("p");
         labelSpan.className = "label";
-        labelSpan.textContent = `Created ${formatDate(usager.created_at)}`;
+        labelSpan.textContent = `Created: ${formatDate(usager.created_at)}`;
 
         const labelSpan2 = document.createElement("p");
         labelSpan2.className = "label";
-        labelSpan2.textContent = `Last modified ${formatDate(usager.updated_at)}`;
+        labelSpan2.textContent = `Updated: ${formatDate(usager.updated_at)}`;
 
 
         firstPart.appendChild(divP);
+        firstPart.appendChild(document.createElement("br"))
         firstPart.appendChild(patternSize);
         firstPart.appendChild(labelSpan);
         firstPart.appendChild(labelSpan2);
