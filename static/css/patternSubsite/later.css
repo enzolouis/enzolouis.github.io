@@ -1,0 +1,92 @@
+
+/* FUTUR MESSAGES */
+/* 
+#message {
+	z-index: 10000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	width: 40%;
+	bottom: 10px;
+	left: 10px;
+	padding: 10px;
+	padding-left: 25px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom: 5px solid;
+	font-weight: bold;
+
+	animation: up 0.4s forwards, down 0.4s 4s forwards;
+}
+#message p {
+	flex: 1;
+	margin: 0;
+}
+#message button {
+	width: 3rem;
+    height: 3rem;
+    background-repeat: no-repeat;
+    background-size: 55%;
+    background-position: center;
+}
+
+#message button {
+    background-image:url("../images/supprimer.png");
+}
+#message button:hover {
+    background-image: url("../images/supprimerHover.png");
+}
+
+.messageError {
+	background: #fde1de;
+	color: #ec412f;
+}
+.messageError::before {
+	content: "Erreur";
+	background-color: white;
+	padding: 1%;
+	margin-right: 10px;
+	border-radius: 10px;
+	font-weight: bold;
+}
+
+.messageError button {
+	background-color: #fde1de;
+}
+
+.messageSuccess {
+	background: #b9dfc6;
+	color: #0cab55;
+}
+.messageSuccess::before {
+	content: "Succès";
+	background-color: white;
+	padding: 1%;
+	margin-right: 10px;
+	border-radius: 10px;
+	font-weight: bold;
+}
+
+.messageSuccess button {
+	background-color: #b9dfc6;
+}
+
+@keyframes up{
+	0%{
+		transform: translateX(-700px);
+	}
+	100%{
+		transform: translateX(0px);
+	}
+}
+
+@keyframes down{
+	0%{
+		transform: translateY(0px);
+	}
+	100%{
+		transform: translateY(100px);
+	}
+}
+*/

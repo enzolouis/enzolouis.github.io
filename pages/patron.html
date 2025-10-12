@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../static/css/patternSubsite/styles.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/patternSubsite/home.css">
+  	<script defer src="https://use.fontawesome.com/releases/v6.4.2/js/all.js"></script>
+	<title>Pattern measures</title>
+</head>
+<body>
+	<h1><a class="breadcrumb-link" href="patrons.html">Home</a> <i class="fa-solid fa-angle-right"></i> <a id="profile" class="breadcrumb-link"></a></h1>
+
+	<div class="fullscreen-loader" id="loader">
+	  <div class="loader-content">
+	    <div class="spinner"></div>
+	    <p>Saving...</p>
+	    <p><i>If this is your first visit after a long time, it may take around 40 seconds.</i></p>
+	  </div>
+	</div>
+
+
+	<div>
+		<div id="container">
+		<div class="inner-main">
+			<h2>Patterns</h2>
+			<div class="access-parts">
+				<a id="dress" class="pattern-link" href="#"><span>Dress Pattern</span> <i class="fa-solid fa-angle-right"></i></a>
+				<a id="trousers" class="pattern-link" href="#"><span>Trousers Pattern</span> <i class="fa-solid fa-angle-right"></i></a>
+				<a id="sleeve" class="pattern-link" href="#"><span>Sleeve Pattern</span> <i class="fa-solid fa-angle-right"></i></a>
+				<a id="two-piece-sleeve" class="pattern-link" href="#"><span>Two-piece sleeve Pattern</span> <i class="fa-solid fa-angle-right"></i></a>
+			</div>
+
+			<div class="config-parts">
+				<h2>Pattern parameters</h2>
+				<div class="config">
+					<div id="config-name" class="config-element">
+						<label for="name">Name</label>
+						<div class="input-container">
+							<input id="name" placeholder="ThE pATrOn">
+						</div>
+						<label class="error"></label>
+					</div>
+					<div class="config-element">
+						<label for="easeallowance">Dress ease allowance</label>
+						<div class="input-container">
+							<input id="easeallowance" class="constant" placeholder="(cm)">
+							<span class="unit">cm</span>
+						</div>
+						<label class="error"></label>
+						<input class="slider-constant" type="range" min="0" max="200" value="0">
+					</div>
+				</div>
+
+				<h2>Body measurements</h2>
+				<div class="bodymeasurements">
+					<p class="indication-fill">Dot (.) for decimals</p>
+					<div class="config">
+						<div class="config-element">
+							<label for="height">Height</label>
+							<div class="input-container">
+								<input id="height" class="constant" placeholder="(cm)">
+								<span class="unit">cm</span>
+							</div>
+							<label class="error"></label>
+							<input class="slider-constant" type="range" min="0" max="200" value="0">
+						</div>
+						<div class="config-element">
+							<label for="headheight">Head height</label>
+							<div class="input-container">
+								<input id="headheight" class="constant" placeholder="(cm)">
+								<span class="unit">cm</span>
+							</div>
+							<label class="error"></label>
+							<input class="slider-constant" type="range" min="0" max="200" value="0">
+						</div>
+						<div class="config-element">
+							<label for="backwaistlength">Back waist length</label>
+							<div class="input-container">
+								<input id="backwaistlength" class="constant" placeholder="(cm)">
+								<span class="unit">cm</span>
+							</div>
+							<label class="error"></label>
+							<input class="slider-constant" type="range" min="0" max="200" value="0">
+						</div>
+						<div class="config-element">
+							<label for="frontwaistlength">Front waist length</label>
+							<div class="input-container">
+								<input id="frontwaistlength" class="constant" placeholder="(cm)">
+								<span class="unit">cm</span>
+							</div>
+							<label class="error"></label>
+							<input class="slider-constant" type="range" min="0" max="200" value="0">
+						</div>
+						<div class="config-element">
+							<label for="hipdepth">Hip depth</label>
+							<div class="input-container">
+								<input id="hipdepth" class="constant" placeholder="(cm)">
+								<span class="unit">cm</span>
+							</div>
+							<label class="error"></label>
+							<input class="slider-constant" type="range" min="0" max="200" value="0">
+						</div>
+						<div class="config-element">
+							<label for="jacketlength">Jacket length</label>
+							<div class="input-container">
+								<input id="jacketlength" class="constant" placeholder="(cm)">
+								<span class="unit">cm</span>
+							</div>
+							<label class="error"></label>
+							<input class="slider-constant" type="range" min="0" max="200" value="0">
+						</div>
+						<div class="config-element">
+							<label for="dresslength">Dress length</label>
+							<div class="input-container">
+								<input id="dresslength" class="constant" placeholder="(cm)">
+								<span class="unit">cm</span>
+							</div>
+							<label class="error"></label>
+							<input class="slider-constant" type="range" min="0" max="200" value="0">
+						</div>
+						<div class="config-element">
+							<label for="skirtlength">Skirt length</label>
+							<div class="input-container">
+								<input id="skirtlength" class="constant" placeholder="(cm)">
+								<span class="unit">cm</span>
+							</div>
+							<label class="error"></label>
+							<input class="slider-constant" type="range" min="0" max="200" value="0">
+						</div>
+						<div class="config-element">
+							<label for="cratchlength">Crotch length</label>
+							<div class="input-container">
+								<input id="cratchlength" class="constant" placeholder="(cm)">
+								<span class="unit">cm</span>
+							</div>
+							<label class="error"></label>
+							<input class="slider-constant" type="range" min="0" max="200" value="0">
+						</div>
+						<div class="config-element">
+							<label for="kneelength">Knee length</label>
+							<div class="input-container">
+								<input id="kneelength" class="constant" placeholder="(cm)">
+								<span class="unit">cm</span>
+							</div>
+							<label class="error"></label>
+							<input class="slider-constant" type="range" min="0" max="200" value="0">
+						</div>
+						<div class="config-element">
+							<label for="trouserslength">Trousers length</label>
+							<div class="input-container">
+								<input id="trouserslength" class="constant" placeholder="(cm)">
+								<span class="unit">cm</span>
+							</div>
+							<label class="error"></label>
+							<input class="slider-constant" type="range" min="0" max="200" value="0">
+						</div>
+						<div class="config-element">
+							<label for="elbowlength">Elbow length</label>
+							<div class="input-container">
+								<input id="elbowlength" class="constant" placeholder="(cm)">
+								<span class="unit">cm</span>
+							</div>
+							<label class="error"></label>
+							<input class="slider-constant" type="range" min="0" max="200" value="0">
+						</div>
+						<div class="config-element">
+							<label for="sleevelength">Sleeve length</label>
+							<div class="input-container">
+								<input id="sleevelength" class="constant" placeholder="(cm)">
+								<span class="unit">cm</span>
+							</div>
+							<label class="error"></label>
+							<input class="slider-constant" type="range" min="0" max="200" value="0">
+						</div>
+						<div class="config-element">
+							<label for="chestCirc">Chest circumference</label>
+							<div class="input-container">
+								<input id="chestCirc" class="constant" placeholder="(cm)">
+								<span class="unit">cm</span>
+							</div>
+							<label class="error"></label>
+							<input class="slider-constant" type="range" min="0" max="200" value="0">
+						</div>
+						<div class="config-element">
+							<label for="bustcirc">Bust circumference</label>
+							<div class="input-container">
+								<input id="bustcirc" class="constant" placeholder="(cm)">
+								<span class="unit">cm</span>
+							</div>
+							<label class="error"></label>
+							<input class="slider-constant" type="range" min="0" max="200" value="0">
+						</div>
+						<div class="config-element">
+							<label for="waistcirc">Waist circumference</label>
+							<div class="input-container">
+								<input id="waistcirc" class="constant" placeholder="(cm)">
+								<span class="unit">cm</span>
+							</div>
+							<label class="error"></label>
+							<input class="slider-constant" type="range" min="0" max="200" value="0">
+						</div>
+						<div class="config-element">
+							<label for="hip">Hip circumference</label>
+							<div class="input-container">
+								<input id="hip" class="constant" placeholder="(cm)">
+								<span class="unit">cm</span>
+							</div>
+							<label class="error"></label>
+							<input class="slider-constant" type="range" min="0" max="200" value="0">
+						</div>
+						<div class="config-element">
+							<label for="neckcircumference">Neck circumference</label>
+							<div class="input-container">
+								<input id="neckcircumference" class="constant" placeholder="(cm)">
+								<span class="unit">cm</span>
+							</div>
+							<label class="error"></label>
+							<input class="slider-constant" type="range" min="0" max="200" value="0">
+						</div>
+						<div class="config-element">
+							<label for="wristcircumference">Wrist circumference</label>
+							<div class="input-container">
+								<input id="wristcircumference" class="constant" placeholder="(cm)">
+								<span class="unit">cm</span>
+							</div>
+							<label class="error"></label>
+							<input class="slider-constant" type="range" min="0" max="200" value="0">
+						</div>
+						<div class="config-element">
+							<label for="backwidth">Back width</label>
+							<div class="input-container">
+								<input id="backwidth" class="constant" placeholder="(cm)">
+								<span class="unit">cm</span>
+							</div>
+							<label class="error"></label>
+							<input class="slider-constant" type="range" min="0" max="200" value="0">
+						</div>
+						<div class="config-element">
+							<label for="backshoulderwidth">Back shoulder width</label>
+							<div class="input-container">
+								<input id="backshoulderwidth" class="constant" placeholder="(cm)">
+								<span class="unit">cm</span>
+							</div>
+							<label class="error"></label>
+							<input class="slider-constant" type="range" min="0" max="200" value="0">
+						</div>
+						<div class="config-element">
+							<label for="bustheight">Bust height</label>
+							<div class="input-container">
+								<input id="bustheight" class="constant" placeholder="(cm)">
+								<span class="unit">cm</span>
+							</div>
+							<label class="error"></label>
+							<input class="slider-constant" type="range" min="0" max="200" value="0">
+						</div>
+						<div class="config-element">
+							<label for="bustdifference">Bust difference</label>
+							<div class="input-container">
+								<input id="bustdifference" class="constant" placeholder="(cm)">
+								<span class="unit">cm</span>
+							</div>
+							<label class="error"></label>
+							<input class="slider-constant" type="range" min="0" max="200" value="0">
+						</div>
+						<div class="config-element">
+							<label for="breastdistance">Breast distance</label>
+							<div class="input-container">
+								<input id="breastdistance" class="constant" placeholder="(cm)">
+								<span class="unit">cm</span>
+							</div>
+							<label class="error"></label>
+							<input class="slider-constant" type="range" min="0" max="200" value="0">
+						</div>
+					</div>
+					<div class="buttons">
+						<button id="save"><span style="padding-right:15px">Save</span><span id="save-svg"><i class="fa-solid fa-floppy-disk"></i></span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="result-parts" id="dress-pattern">
+			<button class="back-pattern"><i class="fa-solid fa-angle-left"></i> <span>Back</span></button>
+			<h2>Basic dress with darts size <span class="size-result"></span> cm, ease-allowance <span id="ease-allowance-result"></span> cm.</h2>
+			<div class="content">
+				<div class="back">
+					<p class="title">BACK:</p>
+					<p>begin with top left corner of square: this is point A.</p>
+					<div class="measure">
+						<p class="label">A-B</p>
+						<p class="value">= <span id="ab-value"></span> cm (1/24 size + 0,2 cm)</p>
+					</div>
+					<div class="measure">
+						<p class="label">A-B₁</p>
+						<p class="value">= Square down 4,5 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">A-C</p>
+						<p class="value">= <span id="ac-value"></span> cm (1/8 height + 1/24 size + (1,7 cm) ease allowance (arm-hole depth measurement))</p>
+					</div>
+					<div class="measure">
+						<p class="label">A-D</p>
+						<p class="value">= <span id="ad-value"></span> cm (Back waist length)</p>
+					</div>
+					<div class="measure">
+						<p class="label">D-E</p>
+						<p class="value">= <span id="de-value"></span> cm (Hip depth)</p>
+					</div>
+					<div class="measure">
+						<p class="label">A-F</p>
+						<p class="value">= <span id="af-value"></span> cm (Dress length (up to the knee))</p>
+					</div>
+					<div class="measure">
+						<p class="label">A-G</p>
+						<p class="value">= <span id="ag-value"></span> cm (1/6 size (starting point of shoulder length, draw neck curbe, join point G to point B))</p>
+					</div>
+					<div class="measure">
+						<p class="label">A-H</p>
+						<p class="value">= <span id="ah-value"></span> cm (1/2 back width)</p>
+					</div>
+					<div class="measure">
+						<p class="label">C-C₁</p>
+						<p class="value">= <span id="cc1-value"></span> cm (1/4 bust circ. - 1 cm + ease allowance)</p>
+					</div>
+					<div class="measure">
+						<p class="label">D-D₁</p>
+						<p class="value">= <span id="dd1-value"></span> cm (1/4 waist circ. - 1 + 3cm (dart) + ease allowance)</p>
+					</div>
+					<div class="measure">
+						<p class="label">E-E₁</p>
+						<p class="value">= <span id="ee1-value"></span> cm (1/4 hip - 1 cm + ease allowance)</p>
+					</div>
+					<div class="measure">
+						<p class="label">F-F₁</p>
+						<p class="value">= <span id="ff1-value"></span> cm (Equal to E-E₁). Join points C₁-D₁, E₁-F₁ with the straigth edge. Join points D₁-E₁ with the curve. This is the side seam</p>
+					</div>
+					<div class="measure">
+						<p class="label">H-I</p>
+						<p class="value">= Perpendicular to C-C₁</p>
+					</div>
+					<div class="measure">
+						<p class="label">H-L</p>
+						<p class="value">= Square down 4,5 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">B₁-L₁</p>
+						<p class="value">= <span id="b1l1-value"></span> cm (1/2 back shoulder width). Join points G-L₁ to create the shoulder length</p>
+					</div>
+					<div class="measure">
+						<p class="label">I-M</p>
+						<p class="value">= Square up 5 cm and move right 0,3 cm; with the curve join points L₁-M-C₁ to draw the armhole. Measure down 9 cm on armhole curve from point L₁ and mark two notches. The notches will be the reference point for attaching the sleeve to the bodice in the sewing process (see diagram)</p>
+					</div>
+					<br>
+					<p class="title">Dart:</p>
+					
+					<div class="measure">
+						<p class="label">D-R</p>
+						<p class="value">= <span id="dr-value"></span> cm (1/2 of D-D₁)</p>
+					</div>
+					<div class="measure">
+						<p class="label">R-R₁</p>
+						<p class="value">= Perpendicular to C-C₁ - 2 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">R-R₂</p>
+						<p class="value">= Square down 14 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">R-R₃</p>
+						<p class="value">= 1,5 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">R-R₄</p>
+						<p class="value">= 1,5 cm, join the points R₁-R₃-R₂-R₄ (see diagram)</p>
+					</div>
+				</div>
+
+				<div class="front">
+					<p class="title">FRONT:</p>
+					<p>begin with top right corner of the square: this is point A.</p>
+					<div class="measure">
+						<p class="label">A-C</p>
+						<p class="value">= <span id="ac-value-front"></span> cm (1/8 height + 1/24 size + (1,7 cm) ease allowance (arm-hole depth measurement))</p>
+					</div>
+					<div class="measure">
+						<p class="label">A-D</p>
+						<p class="value">= <span id="ad-value-front"></span> cm (Back waist length)</p>
+					</div>
+					<div class="measure">
+						<p class="label">D-A₁</p>
+						<p class="value">= <span id="da1-value"></span> cm (Front waist length)</p>
+					</div>
+					<div class="measure">
+						<p class="label">A₁-B</p>
+						<p class="value">= <span id="a1b-value"></span> cm (1/6 size + 1 cm (neckline depth))</p>
+					</div>
+					<div class="measure">
+						<p class="label">D-E</p>
+						<p class="value">= <span id="de-value-front"></span> cm (Hip depth)</p>
+					</div>
+					<div class="measure">
+						<p class="label">A-F</p>
+						<p class="value">= <span id="af-value-front"></span> cm (Dress length (up to the knee))</p>
+					</div>
+					<div class="measure">
+						<p class="label">A₁-G</p>
+						<p class="value">= <span id="a1g-value"></span> cm (1/6 size (starting point of shoulder length) with the curve connecting points G-B₁-B)</p>
+					</div>
+					<div class="measure">
+						<p class="label">A₁-H</p>
+						<p class="value">= <span id="a1h-value"></span> cm (1/2 back width)</p>
+					</div>
+					<div class="measure">
+						<p class="label">C-C₂</p>
+						<p class="value">= <span id="cc2-value"></span> cm (1/4 bust circ. + 1 cm + ease allowance)</p>
+					</div>
+					<div class="measure">
+						<p class="label">D-D₂</p>
+						<p class="value">= <span id="dd2-value"></span> cm (1/4 waist circ. + 1 + 3cm (dart) + ease allowance)</p>
+					</div>
+					<div class="measure">
+						<p class="label">E-E₂</p>
+						<p class="value">= <span id="ee2-value"></span> cm (1/4 hip + 1 cm + ease allowance)</p>
+					</div>
+					<div class="measure">
+						<p class="label">F-F₂</p>
+						<p class="value">= <span id="ff2-value"></span> cm (Same measurement as E-E₂). Join points C₂-D₂, E₂-F₂ with straigth edge. Join points D₂-E₂ with the curve. This is the side seam</p>
+					</div>
+					<div class="measure">
+						<p class="label">H-I</p>
+						<p class="value">= Perpendicular to C-C₂</p>
+					</div>
+					<div class="measure">
+						<p class="label">H-L</p>
+						<p class="value">= Square down 7,5 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">G-L₁</p>
+						<p class="value">Measure shoulder length G-L₁ on back bodice. Front and back should be the same length. Connect the two points</p>
+					</div>
+					<div class="measure">
+						<p class="label">A₁-N</p>
+						<p class="value">= <span id="a1n-value"></span> cm (Bust height)</p>
+					</div>
+					<div class="measure">
+						<p class="label">N-N₁</p>
+						<p class="value">= <span id="nn1-value"></span> cm (1/2 breast distance)</p>
+					</div>
+					<div class="measure">
+						<p class="label">G-G₁</p>
+						<p class="value">= Starting at point G, move to the left towards L₁ <span id="gg1-value"></span> cm (1/10 size + 0,5 cm)</p>
+					</div>
+					<div class="measure">
+						<p class="label">G₁-G₂</p>
+						<p class="value">= Square up 1,6 cm on right angles to the shoulder line and join to point G</p>
+					</div>
+					<div class="measure">
+						<p class="label">G₂-N₁</p>
+						<p class="value">= Join with a straight line to the bust point</p>
+					</div>
+					<div class="measure">
+						<p class="label">N₁-N₂</p> <!-- PAS 2 cm comme sur la feuille (voir correction.txt) -->
+						<p class="value">= Square down 7,5 cm and move left <span id="n1n2-value"></span> cm ((bustCirc - chestCirc) / 2) cm at right angle to the dart line.</p>
+					</div>
+					<div class="measure">
+						<p class="label">G₃-N₁</p>
+						<p class="value">= Measure G₂-N₁ and use this measurement to draw a line from N₁ up to G₃ so as to complete the dart. Darts legs are always the same length.</p>
+					</div>
+					<div class="measure">
+						<p class="label">G-L₂</p>
+						<p class="value">= Close the dart ending up in G₂-G₃ and draw the shoulder line equal to the back</p>
+					</div>
+					<div class="measure">
+						<p class="label">I-M</p>
+						<p class="value">= Square up 5 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">M-M₁</p> <!-- ? varies -->
+						<p class="value">= Move left 2 cm (this measurement varies according to the dart depth). With the curve draw the armhole joining points C₂-M₁-L₂ from L₂. Measure down 9 cm on armhole curve and mark one notch. The notch will be the reference point for attaching the sleeve to the bodice in the sewing process (see the diagram)</p>
+					</div>
+					<div class="measure">
+						<p class="label">M₁-M₂</p>
+						<p class="value">= Perpendicular to I-C₂ and mark one point (reference point to the sleeve)</p>
+					</div>
+
+					<br>
+					<p class="title">Dart:</p>
+					
+					<div class="measure">
+						<p class="label">D-R</p>
+						<p class="value">= <span id="dr-value-front"></span> cm (Equal length to N-N₁)</p>
+					</div>
+					<div class="measure">
+						<p class="label">R-R₁</p>
+						<p class="value">= Perpendicular to D-D₂. From point N₁ square down 2 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">R-R₂</p>
+						<p class="value">= Square down 10 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">R-R₃</p>
+						<p class="value">= 1,5 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">R-R₄</p>
+						<p class="value">= 1,5 cm join the points R₁-R₃-R₂-R₄ (see diagram)</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="result-parts" id="trousers-pattern">
+			<button class="back-pattern"><i class="fa-solid fa-angle-left"></i> <span>Back</span></button>
+			<h2>TROUSERS with WIDE HEMLINE size <span class="size-result"></span> cm.</h2>
+			<div class="content">
+				<div class="back">
+					<p>Use the basic trousers to draft this pattern.</p>
+					<p>Square down and left from A.</p>
+					<p class="title">FRONT:</p>
+					<div class="measure">
+						<p class="label">A-B</p>
+						<p class="value">= <span id="ab-value-trousers"></span> cm (Hip depth)</p>
+					</div>
+					<div class="measure">
+						<p class="label">A-C</p>
+						<p class="value">= <span id="ac-value-trousers"></span> cm (Crotch length)</p>
+					</div>
+					<div class="measure">
+						<p class="label">B-B₁</p>
+						<p class="value">= <span id="bb1-value-trousers"></span> cm (1/4 hip circ. + 1,5 cm ease allowance)</p>
+					</div>
+					<div class="measure">
+						<p class="label">B-B₂</p>
+						<p class="value">= Square right 0,5 cm, join point A to B₂</p>
+					</div>
+					<div class="measure">
+						<p class="label">C-C₁</p>
+						<p class="value">= <span id="cc1-value-trousers"></span> cm (Same measurement as B-B₁)</p>
+					</div>
+					<div class="measure">
+						<p class="label">C-C₂</p>
+						<p class="value">= Square right <span id="cc2-value-trousers"></span> cm (1/20 hip circ. + 0,5 cm ease allowance)</p>
+					</div>
+					<div class="measure">
+						<p class="label">D</p>
+						<p class="value">= <span id="d-value-trousers"></span> cm (1/2 of C₁-C₂), from point C₁ or C₂</p>
+					</div>
+					<div class="measure">
+						<p class="label">E-D</p>
+						<p class="value">= Perpendicular to C₁-C₂</p>
+					</div>
+					<div class="measure">
+						<p class="label">E-D₁</p>
+						<p class="value">= <span id="ed1-value-trousers"></span> cm (Knee length)</p>
+					</div>
+					<div class="measure">
+						<p class="label">E-F</p>
+						<p class="value">= <span id="ef-value-trousers"></span> cm (Trousers length + 8 cm), 4 cm for the band. Divide in half and mark for band fold</p>
+					</div>
+					<div class="measure">
+						<p class="label">A-A₁</p>
+						<p class="value">= <span id="aa1-value-trousers"></span> (1/4 waist circ. + 1 + 4cm for pleat or dart (see graphic))</p>
+					</div>
+					<div class="measure">
+						<p class="label">A₁-A₂</p>
+						<p class="value">= Square up 1 cm connect to A</p>
+					</div>
+					<div class="measure">
+						<p class="label">F₁-F₂</p>
+						<p class="value">= Trousers width 26-30. From point F divide by half the width of the trousers (not a fixed measurement)</p>
+					</div>
+					<div class="measure">
+						<p class="label">D₂-D₃</p>
+						<p class="value">= Width knee same measurement as F₁-F₂ - 2 cm, join points C₂-D₂-F₂ (inseam), C₁-D₃-F₁ (outseam)</p>
+					</div>
+					<div class="measure">
+						<p class="label">A-A₃</p>
+						<p class="value">= Move left 3 cm and draw the fly (for zip-per)</p>
+					</div>
+					<div class="measure">
+						<p class="label">E-E₁</p>
+						<p class="value">= Move left 4 cm for pleat</p>
+					</div>
+					<p class="title">Pocket:</p>
+					<div class="measure">
+						<p class="label">A₂-I</p>
+						<p class="value">= Move right 3 cm</p>
+					</div>
+					
+					<div class="measure">
+						<p class="label">I-L</p>
+						<p class="value">= Move right 4 cm (pocket facing)</p>
+					</div>
+					<div class="measure">
+						<p class="label">I-L₁</p>
+						<p class="value">= Square down 2 cm (pocket starting point)</p>
+					</div>
+					<div class="measure">
+						<p class="label">L₁-I₁</p>
+						<p class="value">= 15 cm pocket measurement</p>
+					</div>
+					<div class="measure">
+						<p class="label">E-D-B₁</p>
+						<p class="value">= Inner pocket (see diagram)</p>
+					</div>
+				</div>
+
+				<div class="front">
+					<p class="title">BACK:</p>
+					<p>the back will be drafted over the front</p>
+					<div class="measure">
+						<p class="label">A-H</p>
+						<p class="value">= 1/2 A-E + 2 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">H-H₁</p>
+						<p class="value">= Square up 2 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">C-C₃</p>
+						<p class="value">= <span id="cc3-value-back-trousers"></span> cm (1/24 half of the hip connect to H₁)</p>
+					</div>
+					<div class="measure">
+						<p class="label">C₃-C4</p>
+						<p class="value">= <span id="c3c4-value-back-trousers"></span> cm (1/10 hip circ.)</p>
+					</div>
+					<div class="measure">
+						<p class="label">L</p>
+						<p class="value">= Reference point for measurement of the hip</p>
+					</div>
+					<div class="measure">
+						<p class="label">H₁-H₂</p>
+						<p class="value">= <span id="h1h2-value-back-trousers"></span> cm (1/4 waist circ. - 1 cm + 3 cm for dart)</p>
+					</div>
+					<div class="measure">
+						<p class="label">H₂-H₃</p>
+						<p class="value">= Square up 1 cm and join to point H₁</p>
+					</div>
+					<div class="measure">
+						<p class="label">L-L₁</p>
+						<p class="value">= <span id="ll1-value-back-trousers"></span> cm (1/4 hip circ. + 1 cm ease allowance), with a curve points H₃-L₁ (side seam), L-C4 (back crotch)</p>
+					</div>
+					<div class="measure">
+						<p class="label">G-G₁</p>
+						<p class="value">= From points D₂-D₃ add 1,5 cm for each side</p>
+					</div>
+					<div class="measure">
+						<p class="label">F₃-F4</p>
+						<p class="value">= Add the same amount as G-G₁, join points L₁-G-F₃ (out seam), C4-G₁-F4 (inner seam)</p>
+					</div>
+					<p class="title">Dart:</p>
+					<div class="measure">
+						<p class="label">M</p>
+						<p class="value">= <span id="m-value-back-trousers"></span> cm (1/2 H₁-H₃)</p>
+					</div>
+					<div class="measure">
+						<p class="label">M-N</p>
+						<p class="value">= Move down 14 cm parallel line H₁-L</p>
+					</div>
+					<div class="measure">
+						<p class="label">M₁-M₂</p>
+						<p class="value">= From point M move each side 1 cm and join to point N</p>
+					</div>
+					<p class="title">Pocket:</p>
+					<div class="measure">
+						<p class="label">H₃-I</p>
+						<p class="value">= Move down 3 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">I-A₁</p>
+						<p class="value">Square right 4 cm and mark 12 cm for the pocket parallel to line H₃-H₁</p>
+					</div>
+					<p>Draw inner pocket and facing as shown on diagram</p>
+					<p class="title">Waistband</p>
+					<div class="measure">
+						<p class="label">A-B</p>
+						<p class="value">= <span id="ab-value-back-waistband-trousers"></span> (Waist circ.)</p>
+					</div>
+					<div class="measure">
+						<p class="label">B-B₁</p>
+						<p class="value">= 3 cm measurement of the fly</p>
+					</div>
+					<div class="measure">
+						<p class="label">A-C</p>
+						<p class="value">= 5 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">C₁</p>
+						<p class="value">= 2,5 cm (from A or C) (1/2 of A-C waistbanwidth), draw the fold line </p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<div class="result-parts" id="sleeve-pattern">
+			<button class="back-pattern"><i class="fa-solid fa-angle-left"></i> <span>Back</span></button>
+			<h2>BASIC SLEEVE FOUNDATION size <span class="size-result"></span> cm.</h2>
+			<p><i>Note: A-B use the formula 1/2 size, not 1/2 size - 1 cm (t'as mis le - 1 entre parenthèse)</i></p>
+			<p><i>Note: A-E use the formula 1/10 height - 1 cm, not 1/10 height (t'as ajouté un - 1 cm)</i></p>
+			<div class="content">
+				<div class="back">
+					<p>
+							The sleeve foundation is based upon the basic bodice, whose armhole circ. must be accurately taken. In order to ensure a perfect fit of the sleeve, and at the same time to ease movements, it is necessary to add 3-5 cm to the armhole circ. 
+					</p>
+					<p>Begin with top left corner of the square. This is point A.</p>
+					<div class="measure">
+						<p class="label">A-B</p>
+						<p class="value">= <span id="ab-value-sleeve"></span> cm (1/2 size)</p>
+					</div>
+					<div class="measure">
+						<p class="label">C</p>
+						<p class="value">= <span id="c-value-sleeve"></span> cm (1/2 of A-B), from A or B</p>
+					</div>
+					<div class="measure">
+						<p class="label">A-D</p>
+						<p class="value">= <span id="ad-value-sleeve"></span> cm (1/10 size + 0,5 cm)</p>
+					</div>
+					<div class="measure">
+						<p class="label">A-E</p>
+						<p class="value">= <span id="ae-value-sleeve"></span> cm (1/10 height - 1 cm)</p>
+					</div>
+					<div class="measure">
+						<p class="label">B-E₁</p>
+						<p class="value">Parallel to A-E</p>
+					</div>
+					<p>Copy measurements from the opposite side and connect points B₁-D, E-E₁</p>
+					<div class="measure">
+						<p class="label">C-C₁</p>
+						<p class="value">= Square down from point C up to line E-E₁</p>
+					</div>
+					<div class="measure">
+						<p class="label">E-F</p>
+						<p class="value">= Equal measurement of the back bodice of line I-C₁ (+0,5 cm only it if is necessary)</p>
+					</div>
+					<div class="measure">
+						<p class="label">E₁-F₁</p>
+						<p class="value">= Equal measurement of the front bodice of line M₂-C₂ (M₂-C₂ on front with darts, I-C₂ on front without darts) (+0,5 cm (from front bodice) not a fixed measurement)</p>
+					</div>
+					<div class="measure">
+						<p class="label">E-M</p>
+						<p class="value">= Move up 5 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">M-N</p>
+						<p class="value">= Square left 1 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">E₁-M₁</p>
+						<p class="value">= Move up 5 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">B₁-B₂</p>
+						<p class="value">= Move left 3,5 cm</p>
+					</div>
+				</div>
+				<div class="front">
+					<div class="measure">
+						<p class="label">D-D₁</p>
+						<p class="value">= Move right 3 cm and use a curve to draw the sleeve cap. Connect points C-D₁-B₂, B₂-M₁-F₁, D₁-N-F (arm-hole). From point C measure down the back of sleeve cap 10 cm and mark two notches. From point C measure down the front of sleeve cap 10,3 cm and mark one notch.</p>
+					</div>
+					<div class="measure">
+						<p class="label">C-H</p>
+						<p class="value">= <span id="ch-value-sleeve"></span> (Elbow length)</p>
+					</div>
+					<div class="measure">
+						<p class="label">C-I</p>
+						<p class="value">= <span id="ci-value-sleeve"></span> (Sleeve length)</p>
+					</div>
+					<div class="measure">
+						<p class="label">I-L</p>
+						<p class="value">= Square left from point I the samed measurement as line C₁-F - 2,5 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">I-L₁</p>
+						<p class="value">= Square right from point I the samed measurement as line C₁-F - 2,5 cm. Connect points L-F, L₁-F₁</p>
+					</div>
+					<p>Note: sleeve ease may change according to fabrics and sleeve styleline as it happens to wrist width.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="result-parts" id="two-piece-sleeve-pattern">
+			<button class="back-pattern"><i class="fa-solid fa-angle-left"></i> <span>Back</span></button>
+			<h2>The BASIC TWO-PIECE SLEEVE size <span class="size-result"></span> cm.</h2>
+			<div class="content">
+				<div class="back">
+					<p>Square down and across from A.</p>
+					<div class="measure">
+						<p class="label">A-B</p>
+						<p class="value">= <span id="ab-value-sleeve2"></span> cm (1/2 size)</p>
+					</div>
+					<div class="measure">
+						<p class="label">A-D</p>
+						<p class="value">= <span id="ad-value-sleeve2"></span> cm (1/10 size + 0,5 cm)</p>
+					</div>
+					<div class="measure">
+						<p class="label">A-E</p>
+						<p class="value">= <span id="ae-value-sleeve2"></span> cm (1/10 body height)</p>
+					</div>
+					<div class="measure">
+						<p class="label">A-H</p>
+						<p class="value">= <span id="ah-value-sleeve2"></span> cm (Elbow length)</p>
+					</div>
+					<div class="measure">
+						<p class="label">A-G</p>
+						<p class="value">= <span id="ag-value-sleeve2"></span> cm (Sleeve length)</p>
+					</div>
+					<div class="measure">
+						<p class="label">B-G₁</p>
+						<p class="value">= Parallel to A-G</p>
+					</div>
+					<p>Square across connecting points D-B₁, E-E₁, H-H₁, G-G₁</p>
+					<div class="measure">
+						<p class="label">C</p>
+						<p class="value">= <span id="c-value-sleeve2"></span> cm (1/2 A-B)</p>
+					</div>
+					<div class="measure">
+						<p class="label">C-E₂-I</p>
+						<p class="value">= Square down from point C to line G-G₁</p>
+					</div>
+					<div class="measure">
+						<p class="label">D-D₁</p>
+						<p class="value">= Move right 3 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">D-D₂</p>
+						<p class="value">= Move down 3 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">D₂-D₃</p>
+						<p class="value">= Move right 1 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">B₁-B₂</p>
+						<p class="value">= Move left 3,5 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">E₁-M</p>
+						<p class="value">= Move up 5 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">M-N</p>
+						<p class="value">= Move up 0,5 cm</p>
+					</div>
+					<p>With a curve connect points C-D₁-D₃ (back sleeve cap), C-B₂-N (front sleeve cup)</p>
+					<div class="measure">
+						<p class="label">E₁-F</p>
+						<p class="value">= Square left 4 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">E₁-M₁</p>
+						<p class="value">= Move up 2,5 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">M₁-M₂</p>
+						<p class="value">= Move right 0,5 cm</p>
+					</div>
+
+					<p>Connect points N-M₂-F (armhole)</p>
+				</div>
+
+				<div class="front">
+					<div class="measure">
+						<p class="label">H-H₂</p>
+						<p class="value">= Move right 3,5 cm (not fixed measure)</p>
+					</div>
+					<div class="measure">
+						<p class="label">I-P</p>
+						<p class="value">= Move left 3 cm, and connect points D₃-H₂-P</p>
+					</div>
+					<div class="measure">
+						<p class="label">G₁-L</p>
+						<p class="value">= Move right 4 cm and join to point F</p>
+					</div>
+					<div class="measure">
+						<p class="label">L-L₁</p>
+						<p class="value">= Move up 2 cm and join to point P</p>
+					</div>
+					<div class="measure">
+						<p class="label">H₁-O</p>
+						<p class="value">= Square right 2,5 cm</p>
+					</div>
+					<p>Connect points F-O-L₁</p>
+					<div class="measure">
+						<p class="label">D₃-C₁</p>
+						<p class="value">= Square right 6 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">E₂-C₂</p>
+						<p class="value">= Move up 2 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">E₁-C₃</p>
+						<p class="value">= Move left 4 cm</p>
+					</div>
+					<p>With a curve connect points C₁-C₂-C₃.</p>
+					<div class="measure">
+						<p class="label">H₂-O₁</p>
+						<p class="value">= Move right 2 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">P-P₁</p>
+						<p class="value">= Move right 1,5 cm, connect points C₁-O₁-P₁</p>
+					</div>
+					<div class="measure">
+						<p class="label">G₁-I₁</p>
+						<p class="value">= Move left 4 cm and move up 1 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">C₃-I₁</p>
+						<p class="value">= Join points and move left 1 cm to elbow line</p>
+					</div>
+					<p>At the sleeve cap, from point C (back side) mark 2 notches with a distance 10,5 cm; from point C (front side) mark a notch 10,5 cm. Copy the red part and separate the two pieces of the pattern.</p>
+				</div>
+			</div>
+		</div>
+
+		</div>
+	</div>
+	<script type="text/javascript" src="../static/js/patternSubsite/API.js"></script>
+	<script type="text/javascript" src="../static/js/patternSubsite/patron.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dual Slider (integer + decimal)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white min-h-screen flex items-center justify-center p-6">
+
+  <div class="bg-gray-50 p-6 rounded-2xl shadow-md w-full max-w-md flex flex-col items-center">
+    <label class="text-lg font-semibold text-gray-800 mb-4">Height</label>
+
+    <div class="flex gap-6 items-center">
+      <!-- MAIN SLIDER (integer part) -->
+      <div class="flex flex-col items-center w-full">
+        <input id="heightInt" type="range" min="100" max="220" value="175" step="1"
+               class="w-full accent-emerald-600 transition-all"
+               oninput="updateHeight()">
+        <span class="text-gray-700 text-sm mt-2">Partie entière</span>
+      </div>
+
+      <!-- DECIMAL SLIDER (vertical) -->
+      <div class="flex flex-col items-center">
+        <input id="heightDec" type="range" min="0" max="9" value="0" step="1"
+               class="h-32 accent-emerald-600 transition-all rotate-180"
+               orient="vertical"
+               oninput="updateHeight()">
+        <span class="text-gray-700 text-sm mt-2">Décimale</span>
+      </div>
+    </div>
+
+    <!-- OUTPUT -->
+    <output id="heightValue" class="mt-6 text-2xl font-semibold text-emerald-700">175.0 cm</output>
+  </div>
+
+  <script>
+    function updateHeight() {
+      const intPart = parseInt(document.getElementById('heightInt').value);
+      const decPart = parseInt(document.getElementById('heightDec').value);
+      const value = (intPart + decPart / 10).toFixed(1);
+      document.getElementById('heightValue').textContent = `${value} cm`;
+    }
+  </script>
+
+</body>
+</html>

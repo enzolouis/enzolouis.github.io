@@ -1,0 +1,79 @@
+main .inner-main {
+    display:block;
+    margin: 15px 30px;
+}
+
+div.config {
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.input-container .unit {
+    font-size:20px;
+    color: #106857;
+    
+}
+
+div.config input {
+    flex:0.8;
+    text-align: center;
+    font-size:30px;
+}
+
+div.config span.unit {
+    flex:0;
+}
+
+.bodymeasurements {
+    margin: 10px;
+}
+
+.access-parts {
+    margin-bottom: 20px;
+    display:flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap:10px;
+}
+
+.access-parts a {
+    display:flex;
+    padding: 15px;
+    align-items: center;
+    background-color: #1bcfab;
+}
+
+.access-parts a:hover {
+    background-color: #16a085;
+}
+
+.access-parts a svg {
+    font-size:20px;
+}
+
+.access-parts a span {
+    padding-right:30px;
+}
+
+.buttons {
+    display:flex;
+    gap:10px;
+}
+
+#save-svg {
+    transition: 0.5s;
+}
+
+.config {
+    gap:10px;
+}
+
+.config-element {
+    background-color: white;
+    border-radius:3px;
+    /*border: 1px solid #eee;*/
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../static/css/patternSubsite/styles.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/patternSubsite/home.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/patternSubsite/patrons.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/patternSubsite/test.css">
+  	<script defer src="https://use.fontawesome.com/releases/v6.4.2/js/all.js"></script>
+	<title>Pattern measures</title>
+</head>
+<body>
+	<div id="suppression">
+        <p>Voulez-vous vraiment supprimer cet objet ?</p>
+        <div>
+            <button onclick="annulationSuppression(this)" class="btna bluenoshadow">Cancel</button>
+            <button id="confirmDeleteButton" class="btna rednoshadow">Delete</button>
+        </div>
+    </div>
+
+	<h1>Home</h1>
+
+	<div class="fullscreen-loader" id="loader">
+	  <div class="loader-content">
+	    <div class="spinner"></div>
+	    <p>Saving...</p>
+	    <p><i>If this is your first visit after a long time, it may take around 40 seconds.</i></p>
+	  </div>
+	</div>
+
+	<main>
+		<div>
+			<h2>Profiles</h2>
+<!--
+		    <div class="filters">
+		        <label for="sort">Sorted by:</label>
+		        <select name="sort" id="sort">
+		            <option>Date de modification</option>
+		            <option>Date de création</option>
+		            <option>Alphabet</option>
+		        </select>
+		    </div>
+
+		    <button>Test</button>
+		    <button class="btna blue">blue</button>
+    		<button class="btna bluenoshadow">bluenoshadow</button>
+			<button class="btna red">red</button>
+			<button class="btna rednoshadow">rednoshadow</button>
+
+		    <a>a a a</a>
+		    <a class="btna rednoshadow">a.btna</a>
+		    <a class="pattern-link">pattern-link</a>
+		-->
+		    <div class="container-pattern">
+		        <div id="createButton">
+		            <a href="patron.html" class="btna primary-reverse">
+		                <span style="font-size:30px"><i class="fa-solid fa-plus"></i></span>
+		            </a>
+		        </div>
+		    </div>
+		</div>
+	</main>
+	<script type="text/javascript" src="../static/js/patternSubsite/API.js"></script>
+	<script type="text/javascript" src="../static/js/patternSubsite/patrons.js"></script>
+</body>
+</html>

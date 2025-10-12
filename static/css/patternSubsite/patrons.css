@@ -1,0 +1,106 @@
+main {
+	margin: 50px;
+}
+
+div.filters label {
+	font-size: 11px;
+	font-weight: bold;
+	margin: 10px;
+	color: #cccccc;
+}
+
+
+div.container-pattern p.name {
+	font-size: 15px;	
+}
+
+div.container-pattern p.label {
+	font-size:10px;
+  	color:#e1e1e1;
+}
+
+
+
+
+div.container-pattern {
+  display:flex;
+  flex-flow:row wrap;
+  align-items:center;
+  justify-content: center;
+  gap:20px;
+  margin: 50px;
+}
+
+div.container-pattern > div {
+  flex:0 0 20%;
+  color:white;
+  border-radius:5px;
+}
+
+div.container-pattern > #createButton {
+  text-align:center;
+  opacity:0.8;
+}
+
+div.container-pattern > #createButton > a {
+  font-size:9px;
+  padding:15px;
+}
+
+div.container-pattern div.first-part {
+  padding:15px;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+  background-color: var(--primary-dark-color);
+}
+
+div.container-pattern div.second-part {
+  padding:15px;
+  display:flex;
+  justify-content: space-between;
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius:5px;
+  background-color: var(--primary-color);
+}
+
+.edit-name {
+	font-size:11px;
+	margin-left: 5px;
+}
+
+
+
+/* bouton modification, suppression */
+.inside-button-modifier, .inside-button-supprimer {
+    width: 3rem;
+    height: 3rem;
+}
+
+
+/* interface de confirmation de suppression */
+
+#suppression {
+    display: none;
+    position:fixed;
+    top: 50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    background:var(--primary-color);
+    z-index:10;
+    border-radius: 5px;
+}
+#suppression p {
+    max-width: 200px;
+    align-items: center;
+    font-size: 14px;
+    padding: 12px;
+    text-align: center;
+    color: white;
+}
+
+#suppression div {
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+

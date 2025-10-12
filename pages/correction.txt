@@ -1,0 +1,37 @@
+✅ N1N2 pas 2cm, (bustCirc - chestCirc) / 2
+
+trousers à ajouter (pantalon en plus de patron haut)
+
+Taille ...(size) ease allowance ...
+taille à afficher
+
+page où on sauvegarde tout d'un coup
+page du patron on précisera juste l'ease allowance et la AC-allowance pour la dress
+
+Ease allowance total constante (sauf A-C 1,7cm)
+
+back shoulder = shoulder (laisser back shoulder en variable on prend souvent back shoulder car > shoulder on prend le max(a, b))
+
+
+
+Des profils
+Possibilité de supprimer directement dans un profile 
+Brouillons
+Modifs de valeurs temporairement pour tester le patron mais pas sauvegarder
+
+exemple
+je modifie un input sans save je vais dans le patron ca fait avec la nouvelle valeur mais ca la sauvegarde pass
+si je f5 ca remet avec l'ancienne valuer
+
+
+
+-----------
+
+
+gérer contraintes taille max nom (100)
+
+
+
+Problème BD :
+crotch* pas cratch (cratch en bd)
+bustcirc * pas bustCirc
