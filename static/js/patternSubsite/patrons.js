@@ -74,10 +74,6 @@ getAllByAPI().then(usagers => {
         patternSize.className = "label"
         patternSize.textContent = `Size ${Math.floor(usager.chestCirc / 2)} cm`
 
-        const patternEaseAllowance = document.createElement("p")
-        patternEaseAllowance.className = "label"
-        patternEaseAllowance.textContent = `Ease allowance ${usager.easeallowance} cm`
-
         const labelSpan = document.createElement("p");
         labelSpan.className = "label";
         labelSpan.textContent = `Created ${formatDate(usager.created_at)}`;
@@ -89,7 +85,6 @@ getAllByAPI().then(usagers => {
 
         firstPart.appendChild(divP);
         firstPart.appendChild(patternSize);
-        firstPart.appendChild(patternEaseAllowance);
         firstPart.appendChild(labelSpan);
         firstPart.appendChild(labelSpan2);
 
