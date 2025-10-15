@@ -26,7 +26,8 @@
 			<h2>Patterns</h2>
 			<div class="access-parts">
 				<a id="dress" class="pattern-link" href="#"><span>Dress Pattern</span> <i class="fa-solid fa-angle-right"></i></a>
-				<a id="trousers" class="pattern-link" href="#"><span>Trousers Pattern</span> <i class="fa-solid fa-angle-right"></i></a>
+				<a id="basictrousers" class="pattern-link" href="#"><span>Basic Trousers Pattern</span> <i class="fa-solid fa-angle-right"></i></a>
+				<a id="trousers" class="pattern-link" href="#"><span>Trousers hemline Pattern</span> <i class="fa-solid fa-angle-right"></i></a>
 				<a id="sleeve" class="pattern-link" href="#"><span>Sleeve Pattern</span> <i class="fa-solid fa-angle-right"></i></a>
 				<a id="two-piece-sleeve" class="pattern-link" href="#"><span>Two-piece sleeve Pattern</span> <i class="fa-solid fa-angle-right"></i></a>
 			</div>
@@ -37,7 +38,7 @@
 					<div id="config-name" class="config-element">
 						<label for="name">Name</label>
 						<div class="input-container">
-							<input id="name" placeholder="ThE pATrOn">
+							<input id="name" class="constant" placeholder="">
 						</div>
 						<label class="error"></label>
 					</div>
@@ -45,6 +46,33 @@
 						<label for="easeallowance">Dress ease allowance</label>
 						<div class="input-container">
 							<input id="easeallowance" class="constant" placeholder="(cm)">
+							<span class="unit">cm</span>
+						</div>
+						<label class="error"></label>
+						<input class="slider-constant" type="range" min="0" max="200" value="0">
+					</div>
+					<div class="config-element">
+						<label for="trouserseaseallowance">Trousers ease allowance</label>
+						<div class="input-container">
+							<input id="trouserseaseallowance" class="constant" placeholder="(cm)">
+							<span class="unit">cm</span>
+						</div>
+						<label class="error"></label>
+						<input class="slider-constant" type="range" min="0" max="200" value="0">
+					</div>
+					<div class="config-element">
+						<label for="bottomtrouserswidth">Bottom trousers width</label>
+						<div class="input-container">
+							<input id="bottomtrouserswidth" class="constant" placeholder="(cm)">
+							<span class="unit">cm</span>
+						</div>
+						<label class="error"></label>
+						<input class="slider-constant" type="range" min="0" max="200" value="0">
+					</div>
+					<div class="config-element">
+						<label for="waistbanwidth">Waistbanwidth</label>
+						<div class="input-container">
+							<input id="waistbanwidth" class="constant" placeholder="(cm)">
 							<span class="unit">cm</span>
 						</div>
 						<label class="error"></label>
@@ -511,8 +539,146 @@
 			</div>
 		</div>
 
+		<div class="result-parts" id="basictrousers-pattern">
+			<button class="back-pattern"><i class="fa-solid fa-angle-left"></i> <span>Back</span></button>
+			<h2>BASIC TROUSERS size <span class="size-result"></span> cm.</h2>
+			<div class="content">
+				<div class="back">
+					<p class="title">FRONT:</p>
+					<p>begin with top right corner of the square. This is point A.</p>
+					<p class="title">FRONT:</p>
+					<div class="measure">
+						<p class="label">A-B</p>
+						<p class="value">= <span id="ab-value-basictrousers"></span> cm (Hip depth)</p>
+					</div>
+					<div class="measure">
+						<p class="label">A-C</p>
+						<p class="value">= <span id="ac-value-basictrousers"></span> cm (Crotch length)</p>
+					</div>
+					<div class="measure">
+						<p class="label">B-B₁</p>
+						<p class="value">= Square left <span id="bb1-value-basictrousers"></span> cm (1/4 hip circ. + ease allowance)</p>
+					</div>
+					<div class="measure">
+						<p class="label">B-B₂</p>
+						<p class="value">= Square right 0,5 cm, join to points A</p>
+					</div>
+					<div class="measure">
+						<p class="label">C-C₁</p>
+						<p class="value">= Square left <span id="cc1-value-basictrousers"></span> cm (Same measurement as B-B₁)</p>
+					</div>
+					<div class="measure">
+						<p class="label">C-C₂</p>
+						<p class="value">= <span id="cc2-value-basictrousers"></span> cm (1/20 hip circ.) Connect to B₂ (crotch front)</p>
+					</div>
+					<div class="measure">
+						<p class="label">D</p>
+						<p class="value">= <span id="d-value-basictrousers"></span> cm (1/2 of C₁-C₂), from point C₁ or C₂</p>
+					</div>
+					<div class="measure">
+						<p class="label">E-D</p>
+						<p class="value">= Square up from line C₁-C₂</p>
+					</div>
+					<div class="measure">
+						<p class="label">E-D₁</p>
+						<p class="value">= <span id="ed1-value-basictrousers"></span> cm (Knee length). Square down from line C₁-C₂</p>
+					</div>
+					<div class="measure">
+						<p class="label">E-F</p>
+						<p class="value">= <span id="ef-value-basictrousers"></span> cm (Trousers length)</p>
+					</div>
+					<div class="measure">
+						<p class="label">A-A₁</p>
+						<p class="value">= <span id="aa1-value-basictrousers"></span> (1/4 waist circ. + 3 cm)</p>
+					</div>
+					<div class="measure">
+						<p class="label">A₁-A₂</p>
+						<p class="value">= Square up 1 cm. With a curve points A₂-B₁-C₁ (side seam)</p>
+					</div>
+					<div class="measure">
+						<p class="label">F₁-F₂</p>
+						<p class="value">= <span id="f1f2-value-basictrousers"></span> cm (Bottom trousers width - 3) / 2). Square out from each side of F using F as mid point</p>
+					</div>
+					<div class="measure">
+						<p class="label">D₂-D₃</p>
+						<p class="value">= Width knee same measurement as F₁-F₂ + 2 cm (= <span id="d2d3-value-basictrousers"></span> cm), join points C₂-D₂-F₂ (inseam), C₁-D₃-F₁ (outseam) square out from each side of D₁ as a mid point</p>
+					</div>
+					<p class="title">Dart:</p>
+					<div class="measure">
+						<p class="label">E-E₁</p>
+						<p class="value">= Move down 10 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">E₂-E₃</p>
+						<p class="value">= From point E move out 1 cm on each side and join to point E₁; using a curve join point A₂ to point E₃</p>
+					</div>
+				</div>
 
-		<div class="result-parts" id="trousers-pattern">
+				<div class="front">
+					<p class="title">BACK:</p>
+					<p>the back will be drafted over the front</p>
+					<div class="measure">
+						<p class="label">A-H</p>
+						<p class="value">= <span id="ah-value-back-basictrousers"></span> cm (1/2 A-E (A-E = D - C-C₂) + 2 cm)</p>
+					</div>
+					<div class="measure">
+						<p class="label">H-H₂</p>
+						<p class="value">= <span id="hh2-value-back-basictrousers"></span> cm (1/4 waist circ. + 2 cm)</p>
+					</div>
+					<div class="measure">
+						<p class="label">H-H₁</p>
+						<p class="value">= Square up 2 cm</p>
+					</div>
+					<div class="measure">
+						<p class="label">C-C₃</p>
+						<p class="value">= Move left <span id="cc3-value-back-basictrousers"></span> cm (1/24 half of the hip circ.), join to point H₁</p>
+					</div>
+					<div class="measure">
+						<p class="label">C₃-C4</p>
+						<p class="value">= <span id="c3c4-value-back-basictrousers"></span> cm (1/10 hip circ.)</p>
+					</div>
+					<div class="measure">
+						<p class="label">L</p>
+						<p class="value">= Reference point for measurement of the hip (intersection of lines H₁-C₃ and B₁-B₂)</p>
+					</div>
+					<div class="measure">
+						<p class="label">H₂-H₃</p>
+						<p class="value">= Square up 1 cm and join to point H₁</p>
+					</div>
+					<div class="measure">
+						<p class="label">L-L₁</p>
+						<p class="value">= <span id="ll1-value-back-basictrousers"></span> cm (1/4 hip circ. + ease allowance), with a curve points H₃-L₁ (side seam), L-C4 back crotch</p>
+					</div>
+					<div class="measure">
+						<p class="label">G-G₁</p>
+						<p class="value">= From points D₃-D₂ add 1,5 cm to each side</p>
+					</div>
+					<div class="measure">
+						<p class="label">F₃-F4</p>
+						<p class="value">= <span id="f3f4-value-back-basictrousers"></span> cm (Bottom trousers width + 3) / 2</p>
+					</div>
+					<p class="title">Dart:</p>
+					<div class="measure">
+						<p class="label">M</p>
+						<p class="value">= <span id="m-value-back-basictrousers"></span> cm (1/2 H₁-H₂)</p>
+					</div>
+					<div class="measure">
+						<p class="label">M-N</p>
+						<p class="value">= Move down 14 cm parallel line H₁-L₃</p>
+					</div>
+					<div class="measure">
+						<p class="label">M₁-M₂</p>
+						<p class="value">= From point M move each side 1 cm and join to point N</p>
+					</div>
+					<p>How to true the trousers pattern: copy the back (red side). Place the back on top of the front pattern matching inseams at hemline. Walk the pattern along inseams, ending at crotch. Mark and remove pattern. The back inseam may be longer than the front. Place the back on top of the front pattern, matching outseams at hemline. Walk pattern along outseam, ending at side waist. Mark and remove the pattern.</p>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<div class="result-parts" id="trousers-pattern"> <!-- trousers with hemline -->
 			<button class="back-pattern"><i class="fa-solid fa-angle-left"></i> <span>Back</span></button>
 			<h2>TROUSERS with WIDE HEMLINE size <span class="size-result"></span> cm.</h2>
 			<div class="content">
@@ -570,11 +736,11 @@
 					</div>
 					<div class="measure">
 						<p class="label">F₁-F₂</p>
-						<p class="value">= Trousers width 26-30. From point F divide by half the width of the trousers (not a fixed measurement)</p>
+						<p class="value">= <span id="f1f2-value-trousers"></span> cm (Bottom trousers width - 3) / 2)</p>
 					</div>
 					<div class="measure">
 						<p class="label">D₂-D₃</p>
-						<p class="value">= Width knee same measurement as F₁-F₂ - 2 cm, join points C₂-D₂-F₂ (inseam), C₁-D₃-F₁ (outseam)</p>
+						<p class="value">= Width knee same measurement as F₁-F₂ - 2 cm (= <span id="d2d3-value-trousers"></span> cm), join points C₂-D₂-F₂ (inseam), C₁-D₃-F₁ (outseam)</p>
 					</div>
 					<div class="measure">
 						<p class="label">A-A₃</p>
@@ -613,7 +779,7 @@
 					<p>the back will be drafted over the front</p>
 					<div class="measure">
 						<p class="label">A-H</p>
-						<p class="value">= 1/2 A-E + 2 cm</p>
+						<p class="value">= <span id="ah-value-back-trousers"></span> cm (1/2 A-E (A-E = D - C-C₂) + 2 cm)</p>
 					</div>
 					<div class="measure">
 						<p class="label">H-H₁</p>
@@ -621,7 +787,7 @@
 					</div>
 					<div class="measure">
 						<p class="label">C-C₃</p>
-						<p class="value">= <span id="cc3-value-back-trousers"></span> cm (1/24 half of the hip connect to H₁)</p>
+						<p class="value">= <span id="cc3-value-back-trousers"></span> cm (1/24 half of the hip circ.), join to point H₁)</p>
 					</div>
 					<div class="measure">
 						<p class="label">C₃-C4</p>
@@ -649,16 +815,16 @@
 					</div>
 					<div class="measure">
 						<p class="label">F₃-F4</p>
-						<p class="value">= Add the same amount as G-G₁, join points L₁-G-F₃ (out seam), C4-G₁-F4 (inner seam)</p>
+						<p class="value">= <span id="f3f4-value-back-trousers"></span> cm (Bottom trousers width + 3) / 2)</p>
 					</div>
 					<p class="title">Dart:</p>
 					<div class="measure">
 						<p class="label">M</p>
-						<p class="value">= <!--<span id="m-value-back-trousers"></span>-->1/2 H₁-H₃</p>
+						<p class="value">= <span id="m-value-back-trousers"></span> cm (1/2 H₁-H₂ (from basic trousers))</p>
 					</div>
 					<div class="measure">
 						<p class="label">M-N</p>
-						<p class="value">= Move down 14 cm parallel line H₁-L</p>
+						<p class="value">= Move down 14 cm parallel line H₁-L₃</p>
 					</div>
 					<div class="measure">
 						<p class="label">M₁-M₂</p>
@@ -685,11 +851,11 @@
 					</div>
 					<div class="measure">
 						<p class="label">A-C</p>
-						<p class="value">= 5 cm</p>
+						<p class="value">= <span id="ac-value-back-waistband-trousers"></span> cm (waistbanwidth)</p>
 					</div>
 					<div class="measure">
 						<p class="label">C₁</p>
-						<p class="value">= 2,5 cm (from A or C) (1/2 of A-C waistbanwidth), draw the fold line </p>
+						<p class="value">= <span id="c1-value-back-waistband-trousers"></span> cm (from A or C) (1/2 of A-C or 1/2 of waistbanwidth), draw the fold line </p>
 					</div>
 				</div>
 			</div>

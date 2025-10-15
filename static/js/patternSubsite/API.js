@@ -1,5 +1,5 @@
-//const APIBASEURL = "http://127.0.0.1:8000"
-const APIBASEURL = "https://embin.onrender.com"
+const APIBASEURL = "http://127.0.0.1:8000"
+//const APIBASEURL = "https://embin.onrender.com"
 
 function getAllByAPI() {
 	showLoader()
